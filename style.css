@@ -31,6 +31,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -817,7 +818,8 @@ p:last-child { margin-bottom: 0; }
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--panel);
 }
 
 .slide .caption {
@@ -988,6 +990,7 @@ code {
   grid-template-columns: 7.7rem 1fr;
   gap: 1.4rem;
   align-items: start;
+  min-width: 0;
 }
 
 .timeline-project::before {
@@ -1004,6 +1007,7 @@ code {
 }
 
 .timeline-project-body {
+  min-width: 0;
   padding: 1.25rem 1.4rem;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -1012,9 +1016,21 @@ code {
 }
 
 .timeline-project-body h3 { margin-bottom: 0.45rem; }
+.timeline-project-body h3,
+.timeline-project-body p { overflow-wrap: anywhere; }
 .timeline-project-body h3 a { color: inherit; text-decoration-color: var(--copper-soft); }
 .timeline-project-body p:not(.project-kicker) { margin-bottom: 1rem; }
 .timeline-project-next .timeline-project-body { border-style: dashed; background: rgba(255, 255, 255, 0.55); }
+
+@media (max-width: 900px) and (min-width: 641px) {
+  .timeline-project {
+    grid-template-columns: 6.4rem minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .project-timeline::before { left: 3.65rem; }
+  .timeline-project::before { left: 3.35rem; }
+}
 
 .timeline-year {
   display: grid;
@@ -1028,6 +1044,7 @@ code {
   .timeline-project { grid-template-columns: 1fr; gap: 0.55rem; padding-left: 1.35rem; }
   .timeline-project::before { left: 0; top: 1.1rem; }
   .timeline-marker { width: fit-content; }
+  .timeline-project-body { padding: 1rem; }
 }
 
 .timeline-marker {
