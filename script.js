@@ -204,8 +204,8 @@ function applyLanguage(language) {
     if (value) element.innerHTML = value;
   });
   if (languageToggle) {
-    languageToggle.textContent = currentLanguage === "nl" ? "NL" : "EN";
-    languageToggle.setAttribute("aria-label", currentLanguage === "nl" ? "Nederlands" : "English");
+    languageToggle.textContent = currentLanguage === "nl" ? "EN" : "NL";
+    languageToggle.setAttribute("aria-label", currentLanguage === "nl" ? "Switch to English" : "Schakel naar Nederlands");
   }
   localStorage.setItem("portfolio-language", currentLanguage);
   updateDate();
