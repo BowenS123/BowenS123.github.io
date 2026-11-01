@@ -430,12 +430,13 @@ p:last-child { margin-bottom: 0; }
 /* Vaardigheden met Badges en Logo's */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 1.2rem;
   margin-top: 1.8rem;
 }
 
 .skill-category-card {
+  min-width: 0;
   background: var(--paper);
   border: 1px solid var(--line);
   border-left: 3px solid var(--pcb-soft);
@@ -443,6 +444,9 @@ p:last-child { margin-bottom: 0; }
   padding: 1.3rem 1.4rem;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
+
+.skill-category-card:nth-child(-n + 2) { grid-column: span 6; }
+.skill-category-card:nth-child(n + 3) { grid-column: span 4; }
 
 .skill-category-card:hover {
   transform: translateY(-3px);
@@ -466,6 +470,15 @@ p:last-child { margin-bottom: 0; }
   flex-wrap: wrap;
   gap: 0.6rem;
   margin-top: 1rem;
+}
+
+@media (max-width: 900px) {
+  .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .skill-category-card:nth-child(n) { grid-column: span 1; }
+}
+
+@media (max-width: 560px) {
+  .skills-grid { grid-template-columns: 1fr; }
 }
 
 .skill-badge {
