@@ -1404,6 +1404,20 @@ code {
     margin-bottom: 2.4rem;
   }
 
+  .project-card.c-project {
+    display: block;
+  }
+
+  .c-project-content {
+    grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: center;
+  }
+
+  .c-project-content > :first-child {
+    max-width: 46ch;
+  }
+
   .project-card:not(.industry-project):not(.project-template) {
     display: grid;
     grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
