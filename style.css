@@ -875,6 +875,17 @@ p:last-child { margin-bottom: 0; }
   font-size: 0.78rem;
 }
 
+@media (min-width: 701px) and (max-width: 1099px) {
+  .c-project-content {
+    grid-template-columns: minmax(0, 0.9fr) minmax(300px, 1.1fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .c-project-content > :first-child {
+    max-width: 42ch;
+  }
+}
+
 .industry-project {
   background: linear-gradient(135deg, var(--white) 0%, #f6f8f4 100%);
 }
