@@ -1,47 +1,501 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijn Portfolio</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f4f4f9; color: #333; }
-        header { background: #24292e; color: #fff; padding: 2rem; text-align: center; }
-        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-        .project { background: #fff; padding: 1.5rem; margin-bottom: 1rem; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h2 { color: #24292e; }
-        a { color: #0366d6; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bowen Liang, Portfolio Elektronica-ICT</title>
+<meta name="description" content="Portfolio Elektronica-ICT van Bowen Liang voor Project X, PXL Hogeschool.">
+<meta name="theme-color" content="#1F3D2C">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Hallo, ik ben Bowen Liang</h1>
-        <p>Developer | Designer | Data Analyst</p>
-    </header>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#top">Bowen Liang</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="topnav">Menu</button>
+    <nav class="topnav" id="topnav">
+      <a href="#over-mij">Over mij</a>
+      <a href="#vaardigheden">Vaardigheden</a>
+      <a href="#projecten">Projecten</a>
+      <a href="#github">GitHub</a>
+      <a href="#tijdlijn">Tijdlijn</a>
+      <a href="#certificaten">Certificaten</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-    <div class="container">
-        <h2>Over Mij</h2>
-        <p>Hier kun je een korte, krachtige introductie over jezelf schrijven. Wat zijn je passies, je vaardigheden en waar ben je momenteel naar op zoek?</p>
+<main id="top">
 
-        <h2>Mijn Projecten</h2>
-        
-        <div class="project">
-            <h3>Project 1: Website Project</h3>
-            <p>Een korte beschrijving van wat dit project inhoudt en welke technologieën (bijv. HTML, Python) je hebt gebruikt.</p>
-            <a href="#">Bekijk Code →</a>
+<!-- intro -->
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow mono">PXL Hogeschool · Elektronica-ICT · Jaar 3</p>
+    <h1>Bowen <span class="hero-lastname">Liang</span></h1>
+    <p class="hero-role">
+      <span id="typing-text"></span><span class="cursor">|</span>
+    </p>
+    <p class="hero-desc">
+      Student Elektronica-ICT met een sterke achtergrond in Elektromechanica. Ik combineer
+      hardware en software om processen slimmer en efficiënter te maken, van hands-on hardware
+      en PCB-ontwerp tot embedded code. Deze pagina bundelt mijn projecten en GitHub-werk.
+    </p>
+    <div class="hero-links">
+      <a class="btn btn-primary" href="#projecten">Bekijk mijn projecten</a>
+      <a class="btn btn-ghost" href="https://github.com/BowenS123" target="_blank" rel="noopener">GitHub-profiel</a>
+    </div>
+  </div>
+</section>
+
+<!-- wie ben ik -->
+<section id="over-mij" class="section">
+  <h2>Over mij</h2>
+  <div class="about-content">
+    <p>
+      Ik ben Bowen Liang, student Elektronica-ICT met een achtergrond in Elektromechanica.
+      Als tech-enthousiasteling hou ik van nieuwe gadgets en zoek ik graag naar manieren
+      om processen te automatiseren en systemen slimmer te maken.
+    </p>
+    <p>
+      Mijn passie ligt bij <strong>hands-on hardware</strong>: het ontwerpen, solderen en testen van
+      fysieke opstellingen, printplaten (PCB's) en microcontrollers. Na mijn opleiding Elektromechanica
+      maakte ik de stap naar de digitale wereld om hardware naadloos te combineren met software.
+    </p>
+    <p>
+      Elektronica-ICT geeft me de tools om geautomatiseerde systemen van A tot Z te ontwerpen,
+      te programmeren en werkend op te leveren, van sensor tot cloud.
+    </p>
+  </div>
+</section>
+
+<!-- vaardigheden -->
+<section id="vaardigheden" class="section section-alt">
+  <div class="section-inner">
+    <h2>Mijn vaardigheden</h2>
+    <p class="section-lead">
+      Tijdens mijn opleiding ontwikkelde ik vaardigheden in programmeren, embedded systems,
+      netwerken en industriële automatisering. Klik op een badge voor meer informatie.
+    </p>
+
+    <div class="skills-grid">
+
+      <div class="skill-category-card">
+        <h3>Programmeren</h3>
+        <p class="xfactor-sub">Software en talen</p>
+        <div class="skill-badges">
+          <a href="https://en.cppreference.com/w/c" target="_blank" rel="noopener" class="skill-badge">
+            <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/c/c-original.svg" alt="" data-mono="C" data-color="#5C6BC0">
+            <span>C</span>
+          </a>
+          <a href="https://isocpp.org/" target="_blank" rel="noopener" class="skill-badge">
+            <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/cplusplus/cplusplus-original.svg" alt="" data-mono="C++" data-color="#00599C">
+            <span>C++</span>
+          </a>
+          <a href="https://www.python.org/" target="_blank" rel="noopener" class="skill-badge">
+            <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" alt="" data-mono="Py" data-color="#3776AB">
+            <span>Python</span>
+          </a>
+          <a href="https://developer.nvidia.com/cuda-zone" target="_blank" rel="noopener" class="skill-badge">
+            <img class="skill-icon" src="https://cdn.simpleicons.org/nvidia/76B900" alt="" data-mono="CU" data-color="#76B900">
+            <span>CUDA</span>
+          </a>
+          <a href="https://code.visualstudio.com/" target="_blank" rel="noopener" class="skill-badge">
+            <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vscode/vscode-original.svg" alt="" data-mono="VS" data-color="#007ACC">
+            <span>VS Code</span>
+          </a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener" class="skill-badge">
+            <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg" alt="" data-mono="H5" data-color="#E34F26">
+            <span>HTML5</span>
+          </a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener" class="skill-badge">
+            <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg" alt="" data-mono="C3" data-color="#1572B6">
+            <span>CSS3</span>
+          </a>
         </div>
+      </div>
 
-        <div class="project">
-            <h3>Project 2: Data Analyse</h3>
-            <p>Beschrijf hier je tweede project en wat het resultaat ervan was.</p>
-            <a href="#">Bekijk Code →</a>
+      <div class="skill-category-card">
+        <h3>Embedded systems</h3>
+        <p class="xfactor-sub">Hardware &amp; microcontrollers</p>
+        <div class="skill-badges">
+          <a href="https://www.espressif.com/en/products/socs/esp32" target="_blank" rel="noopener" class="skill-badge">
+            <img class="skill-icon" src="https://cdn.simpleicons.org/espressif/E7352C" alt="" data-mono="ES" data-color="#E7352C">
+            <span>ESP32</span>
+          </a>
+          <a href="https://www.arduino.cc/" target="_blank" rel="noopener" class="skill-badge">
+            <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/arduino/arduino-original.svg" alt="" data-mono="Ar" data-color="#00979D">
+            <span>Arduino</span>
+          </a>
+          <a href="https://www.infineon.com/cms/en/product/microcontroller/32-bit-psoc-arm-cortex-microcontrollers/" target="_blank" rel="noopener" class="skill-badge">
+            <img class="skill-icon" src="https://cdn.simpleicons.org/infineon/006CB5" alt="" data-mono="PS" data-color="#006CB5">
+            <span>PSoC</span>
+          </a>
+          <a href="https://www.pynq.io/" target="_blank" rel="noopener" class="skill-badge">
+            <span class="skill-mono" style="--mono:#0B6E99">PY</span>
+            <span>PYNQ-Z2</span>
+          </a>
+          <a href="https://www.altium.com/" target="_blank" rel="noopener" class="skill-badge">
+            <img class="skill-icon" src="https://cdn.simpleicons.org/altiumdesigner/A5915F" alt="" data-mono="Al" data-color="#A5915F">
+            <span>Altium Designer</span>
+          </a>
+          <a href="https://developer.nvidia.com/embedded/jetson-nano-developer-kit" target="_blank" rel="noopener" class="skill-badge">
+            <img class="skill-icon" src="https://cdn.simpleicons.org/nvidia/76B900" alt="" data-mono="NV" data-color="#76B900">
+            <span>Jetson Nano</span>
+          </a>
         </div>
+      </div>
 
-        <h2>Contact</h2>
-        <p>Je kunt me bereiken via <a href="mailto:je-email@voorbeeld.com">je-email@voorbeeld.com</a> of volg mij op <a href="https://linkedin.com">LinkedIn</a>.</p>
+      <div class="skill-category-card">
+        <h3>Netwerken &amp; protocollen</h3>
+        <p class="xfactor-sub">Communicatiestandaarden</p>
+        <div class="skill-badges">
+          <a href="https://mqtt.org/" target="_blank" rel="noopener" class="skill-badge">
+            <img class="skill-icon" src="https://cdn.simpleicons.org/mqtt/660066" alt="" data-mono="MQ" data-color="#660066">
+            <span>MQTT</span>
+          </a>
+          <a href="https://lora-alliance.org/" target="_blank" rel="noopener" class="skill-badge">
+            <span class="skill-mono" style="--mono:#1F3D2C">LoRa</span>
+            <span>LoRa</span>
+          </a>
+          <a href="https://www.bluetooth.com/" target="_blank" rel="noopener" class="skill-badge">
+            <img class="skill-icon" src="https://cdn.simpleicons.org/bluetooth/0082FC" alt="" data-mono="BT" data-color="#0082FC">
+            <span>Bluetooth BLE</span>
+          </a>
+          <a href="https://zeromq.org/" target="_blank" rel="noopener" class="skill-badge">
+            <img class="skill-icon" src="https://cdn.simpleicons.org/zeromq/DF0000" alt="" data-mono="ØM" data-color="#DF0000">
+            <span>ZeroMQ</span>
+          </a>
+          <a href="https://www.ssh.com/academy/ssh" target="_blank" rel="noopener" class="skill-badge">
+            <img class="skill-icon" src="https://cdn.simpleicons.org/openssh/231F20" alt="" data-mono="SSH" data-color="#231F20">
+            <span>SSH</span>
+          </a>
+          <a href="https://nodered.org/" target="_blank" rel="noopener" class="skill-badge">
+            <img class="skill-icon" src="https://cdn.simpleicons.org/nodered/8F0000" alt="" data-mono="NR" data-color="#8F0000">
+            <span>Node-RED</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="skill-category-card">
+        <h3>Automatisering</h3>
+        <p class="xfactor-sub">PLC &amp; domotica</p>
+        <div class="skill-badges">
+          <a href="https://www.beckhoff.com/" target="_blank" rel="noopener" class="skill-badge">
+            <span class="skill-mono" style="--mono:#E4501E">BK</span>
+            <span>Beckhoff PLC</span>
+          </a>
+          <a href="https://www.beckhoff.com/en-en/products/automation/twincat/" target="_blank" rel="noopener" class="skill-badge">
+            <span class="skill-mono" style="--mono:#B83A12">TC3</span>
+            <span>TwinCAT 3</span>
+          </a>
+          <a href="https://www.loxone.com/" target="_blank" rel="noopener" class="skill-badge">
+            <span class="skill-mono" style="--mono:#69C350">LX</span>
+            <span>Loxone</span>
+          </a>
+          <a href="https://www.home-assistant.io/" target="_blank" rel="noopener" class="skill-badge">
+            <img class="skill-icon" src="https://cdn.simpleicons.org/homeassistant/18BCF2" alt="" data-mono="HA" data-color="#18BCF2">
+            <span>Home Assistant</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- projectkaarten -->
+<section id="projecten" class="section">
+  <h2>Mijn projecten</h2>
+  <p class="section-lead">
+    Een selectie van mijn projecten, met mijn eigen bijdrage en de gebruikte technologie.
+  </p>
+
+  <!-- PROJECT: LoRa -->
+  <article class="project-card">
+    <div class="project-head">
+      <div>
+        <p class="project-kicker mono">Project onderzoek · PXL Digital Green Project</p>
+        <h3>LoRa GPS-tracker met Raspberry Pi-dashboard</h3>
+        <p class="entry-meta">Jaar 2, Project onderzoek (42EAI1100)</p>
+      </div>
+      <a class="btn btn-ghost btn-sm" href="https://github.com/BowenS123/PXLDIGITAL_GREEN_PROJECT_RESEARCH_Lora" target="_blank" rel="noopener">GitHub Repo</a>
     </div>
 
+    <p class="project-summary">
+      Een batterijgevoede ESP32-zender meet locatie, temperatuur en lichtniveau en stuurt die via LoRa
+      (868 MHz) naar een Raspberry Pi 5. Daar worden de gegevens getoond op een Node-RED-dashboard
+      en op een LCD-scherm. Tijdens een veldtest haalde het systeem een betrouwbaar bereik van
+      ongeveer <strong>1,1 km</strong> met een eenvoudige gluestick-antenne.
+    </p>
+
+    <div class="project-slideshow" data-slideshow>
+      <div class="slideshow-container">
+        <div class="slide active">
+          <img data-src="ZenderLora.png" alt="De LoRa-zender" loading="lazy">
+          <span class="caption">De LoRa-zender met sensoren</span>
+        </div>
+        <div class="slide">
+          <img data-src="DashboardExample.png" alt="Node-RED dashboard" loading="lazy">
+          <span class="caption">Node-RED dashboard met live metingen</span>
+        </div>
+        <div class="slide">
+          <img data-src="ReceiverCaseOutside.png" alt="Behuizing van de ontvanger, buitenkant" loading="lazy">
+          <span class="caption">Ontvanger in behuizing (buitenkant)</span>
+        </div>
+        <div class="slide">
+          <img data-src="ReceiverCaseInside.png" alt="Behuizing van de ontvanger, binnenkant" loading="lazy">
+          <span class="caption">Ontvanger in behuizing (binnenkant)</span>
+        </div>
+        <div class="slide">
+          <img data-src="MapTestDistance.png" alt="Afstandstest op de kaart" loading="lazy">
+          <span class="caption">Veldtest: bereik van ongeveer 1,1 km</span>
+        </div>
+        <button class="slide-prev" aria-label="Vorige foto">&#10094;</button>
+        <button class="slide-next" aria-label="Volgende foto">&#10095;</button>
+      </div>
+      <div class="slideshow-dots">
+        <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+    </div>
+
+    <div class="tech-stack">
+      <span class="tech-tag">ESP32</span>
+      <span class="tech-tag">LoRa E220-900T22D</span>
+      <span class="tech-tag">NEO-6M GPS</span>
+      <span class="tech-tag">DS18B20</span>
+      <span class="tech-tag">Raspberry Pi 5</span>
+      <span class="tech-tag">Node-RED</span>
+      <span class="tech-tag">PlatformIO</span>
+      <span class="tech-tag">C++ / Python</span>
+    </div>
+
+    <details class="reflectie-block">
+      <summary>Mijn bijdrage en resultaten</summary>
+      <div class="details-content">
+        <h4>Mijn specifieke bijdrage</h4>
+        <p>
+          Ik schreef de application note van de zender, bouwde de ESP32-firmware met GPS en
+          temperatuurmeting, en ontwierp de batterijvoeding (Li-ion, TP4056-lader en step-up converter)
+          met stroommetingen van het slaapverbruik. Daarnaast werkte ik mee aan de Node-RED-flow
+          en het dashboard van de ontvanger.
+        </p>
+        <h4>Resultaten</h4>
+        <div class="reflectie-steps">
+          <div class="reflectie-step">
+            <span class="step-label mono">Bereik</span>
+            <p>Ongeveer 1,1 km betrouwbare verbinding met een 15 cm gluestick-antenne.</p>
+          </div>
+          <div class="reflectie-step">
+            <span class="step-label mono">Stroomverbruik</span>
+            <p>Ongeveer 90 mA in light-sleep en 150 mA actief, gemeten met een USB-tester.</p>
+          </div>
+          <div class="reflectie-step">
+            <span class="step-label mono">Leerpunt</span>
+            <p>Regelgeving (ETSI EN 300 220: 14 dBm EIRP, 1 % duty cycle) bepaalt mee de instellingen van de module.</p>
+          </div>
+        </div>
+      </div>
+    </details>
+  </article>
+
+  <!-- PROJECT: Industry 4.0 -->
+  <article class="project-card">
+    <div class="project-head">
+      <div>
+        <p class="project-kicker mono">Project engineering · teamproject</p>
+        <h3>Industry 4.0: geautomatiseerde verwerkingslijn</h3>
+        <p class="entry-meta">Jaar 3, Project Engineering (43EAI1090/2EAI-PEN), semester 2</p>
+      </div>
+      <a class="btn btn-ghost btn-sm" href="https://github.com/BowenS123/2EAI-PEN-2526-Industry4" target="_blank" rel="noopener">GitHub Repo</a>
+    </div>
+
+    <p class="project-summary">
+      Teamproject waarbij een geautomatiseerd systeem werd ontwikkeld dat pannenkoekingrediënten
+      detecteert, weegt en verwerkt via een transportband, QR-visioncamera, robotarm en mixer,
+      gecoördineerd door een Beckhoff PLC via MQTT.
+    </p>
+
+    <div class="tech-stack">
+      <span class="tech-tag">Beckhoff TwinCAT 3</span>
+      <span class="tech-tag">PSoC 6 / ModusToolbox</span>
+      <span class="tech-tag">MQTT</span>
+      <span class="tech-tag">EtherCAT</span>
+      <span class="tech-tag">ESP32</span>
+    </div>
+
+    <details class="reflectie-block">
+      <summary>Mijn bijdrage en reflectie</summary>
+      <div class="details-content">
+        <h4>Mijn specifieke bijdrage</h4>
+        <p>
+          Ik configureerde de EtherCAT-aansturing van de transportbandmotor (EL7332, CoE-parameters,
+          NC-as), bouwde de MQTT-communicatie tussen de robotarm en de PLC uit, en schreef de volledige Application Note.
+        </p>
+
+        <h4>Reflectie (Korthagenmodel)</h4>
+        <div class="reflectie-steps">
+          <div class="reflectie-step">
+            <span class="step-label mono">Fase 1: Situatie</span>
+            <p>Presentatie van het Industry 4.0-project. Mijn focus lag op de EtherCAT-motorsturing en MQTT-communicatie.</p>
+          </div>
+          <div class="reflectie-step">
+            <span class="step-label mono">Fase 2: Terugblik</span>
+            <p>Mijn individuele bijdrage was aanvankelijk minder zichtbaar op GitHub doordat we direct op de main branch werkten.</p>
+          </div>
+          <div class="reflectie-step">
+            <span class="step-label mono">Fase 3: Kernkenmerken</span>
+            <p>Samenwerken vraagt niet alleen een goed werkend systeem, maar ook duidelijke, navolgbare versiebeheer-discipline.</p>
+          </div>
+          <div class="reflectie-step">
+            <span class="step-label mono">Fase 4: Alternatieven</span>
+            <p>Werken via feature branches en PR's voor elke taak, gecombineerd met een heldere rolverdeling.</p>
+          </div>
+          <div class="reflectie-step">
+            <span class="step-label mono">Fase 5: Uitproberen</span>
+            <p>Bij volgende projecten consequent met branches en pull requests werken om de progressie aantoonbaar te maken.</p>
+          </div>
+        </div>
+      </div>
+    </details>
+  </article>
+</section>
+
+<!-- live repo lijst -->
+<section id="github" class="section section-alt">
+  <div class="section-inner">
+    <div class="github-feed-head">
+      <div>
+        <h2>Live vanaf GitHub</h2>
+        <p class="section-lead" style="margin-top:0.4rem;">
+          Automatisch gesynchroniseerd met mijn profiel (<a href="https://github.com/BowenS123" target="_blank" rel="noopener">@BowenS123</a>).
+        </p>
+      </div>
+      <span class="github-status mono" id="githubStatus">repos laden…</span>
+    </div>
+
+    <div class="contribution-box">
+      <h3>GitHub-activiteit</h3>
+      <div class="contribution-chart-container">
+        <img src="https://ghchart.rshah.org/1F3D2C/BowenS123" alt="GitHub-contributiegrafiek van BowenS123" loading="lazy">
+      </div>
+    </div>
+
+    <div class="repo-grid" id="repoGrid">
+      <p class="repo-placeholder">GitHub-repositories worden geladen…</p>
+    </div>
+  </div>
+</section>
+
+<!-- tijdlijn -->
+<section id="tijdlijn" class="section">
+  <div class="section-inner">
+    <h2>Mijn tijdlijn</h2>
+    <p class="section-lead">Mijn traject doorheen de 3 jaar Elektronica-ICT, met de status per vak.</p>
+
+    <div class="timeline-year" style="margin-top:2.2rem;">
+      <div class="timeline-marker mono">Jaar 1</div>
+      <div class="timeline-items">
+        <div class="entry-card">
+          <div class="course-row"><span><span class="course-code">41EAI1270</span>Analog electronics 1</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">41EAI1280</span>Electric fundamentals</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">41EAI1020</span>Analog electronics 2</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">41EAI1290</span>Industrial system</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">41EAI1040</span>Microcontrollers</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">41EAI1130</span>Digital electronics</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">41EAI1060</span>Mechatronics</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">41EAI1080</span>C programming</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">41EAI1100</span>Networked devices</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">41EAI1300</span>Hardware production</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">41EAI1310</span>Communication skills 1</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">41EAI1320</span>PCB design</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">41EAI1070</span>Webtechnologie</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">41EAI1090</span>C programmeren 2</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">41EAI1030</span>Digitale technieken</span><span class="course-status done">voltooid</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-year">
+      <div class="timeline-marker mono">Jaar 2</div>
+      <div class="timeline-items">
+        <div class="entry-card">
+          <div class="course-row"><span><span class="course-code">42EAI1010</span>Elektronische systemen 1</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">42EAI1020</span>Elektronische systemen 2</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">42EAI1030</span>C++ programmeren</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">42EAI1040</span>Embedded Systemen</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">42EAI1050</span>System on Chip</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">42EAI1060</span>Building automation</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">42EAI1070</span>IoT technologie</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">42EAI1080</span>Network Programming</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">42EAI1140</span>Hardware Accelerated Computing</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">42EAI1100</span>Project onderzoek</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">42EAI1130</span>Project engineering</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">42EAI1120</span>Audio Processing</span><span class="course-status done">voltooid</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-year">
+      <div class="timeline-marker mono is-open">Jaar 3</div>
+      <div class="timeline-items">
+        <div class="entry-card">
+          <div class="course-row"><span><span class="course-code">43EAI1010</span>Digitale communicatie</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">43EAI1020</span>Industrial automation</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">43EAI1030</span>Smart systems</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">43EAI1040</span>Image Processing</span><span class="course-status pending">nog te doen</span></div>
+          <div class="course-row"><span><span class="course-code">43EAI1050</span>Embedded Operating System</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">43EAI1100</span>Project embedded</span><span class="course-status done">voltooid</span></div>
+          <div class="course-row"><span><span class="course-code">43EAI1070</span>Professional Innovation</span><span class="course-status pending">nog te doen</span></div>
+          <div class="course-row"><span><span class="course-code">43EAI1090</span>Project X</span><span class="course-status pending">in uitvoering</span></div>
+          <div class="course-row"><span><span class="course-code">43EAI1110</span>Stage en bachelorproef</span><span class="course-status pending">nog te doen</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- certificaten -->
+<section id="certificaten" class="section section-alt">
+  <div class="section-inner">
+    <h2>Certificaten &amp; activiteiten</h2>
+    <p class="section-lead">Certificaten van behaalde cursussen en overige relevante activiteiten.</p>
+
+    <div class="table-scroll">
+      <table class="log-table">
+        <thead>
+          <tr><th>Activiteit</th><th>Type</th><th>Datum</th><th>Bewijs</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fundamentals of Accelerated Computing with CUDA C/C++</td>
+            <td>Certificaat</td>
+            <td>21/02/2025</td>
+            <td><a href="assets/certificaten/Bowen_Liang_NVIDIA.pdf" target="_blank" rel="noopener">Bekijk</a></td>
+            <td class="status">voltooid</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- contact -->
+<section id="contact" class="section contact-section">
+  <h2>Contact</h2>
+  <p>Wil je meer weten over mijn projecten en vaardigheden?</p>
+  <div class="contact-links">
+    <a class="btn btn-ghost" href="https://github.com/BowenS123" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn btn-ghost" href="mailto:Bowen-2003@outlook.com">Bowen-2003@outlook.com</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>Portfolio Elektronica-ICT van Bowen Liang. Laatst bijgewerkt: <span id="updateDate"></span>.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
