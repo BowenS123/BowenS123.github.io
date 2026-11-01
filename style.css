@@ -1415,7 +1415,7 @@ code {
     margin-bottom: 2.4rem;
   }
 
-  .project-card.c-project {
+  .project-card.c-project:not(.industry-project):not(.project-template) {
     display: block;
   }
 
