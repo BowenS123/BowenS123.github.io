@@ -495,16 +495,21 @@ function initMinesweeperGames() {
         if (!cell.mine) cell.count = neighbours(cell.row, cell.column).filter((nextCell) => nextCell.mine).length;
       });
       minesElement.textContent = mineCount;
-      modeButton.classList.remove("is-active");
+      if (modeButton) {
+        modeButton.classList.remove("is-active");
+        modeButton.setAttribute("aria-pressed", "false");
+      }
       updateStatus(currentLanguage === "en" ? "Find all safe cells." : "Vind alle veilige vakjes.");
       render();
     }
 
-    modeButton.addEventListener("click", () => {
-      flagMode = !flagMode;
-      modeButton.classList.toggle("is-active", flagMode);
-      modeButton.setAttribute("aria-pressed", String(flagMode));
-    });
+    if (modeButton) {
+      modeButton.addEventListener("click", () => {
+        flagMode = !flagMode;
+        modeButton.classList.toggle("is-active", flagMode);
+        modeButton.setAttribute("aria-pressed", String(flagMode));
+      });
+    }
     resetButton.addEventListener("click", start);
     start();
   });
