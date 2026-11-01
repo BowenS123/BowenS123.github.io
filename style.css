@@ -769,6 +769,100 @@ p:last-child { margin-bottom: 0; }
   margin-bottom: 1.2rem;
 }
 
+.c-project {
+  background: linear-gradient(135deg, var(--white) 0%, #f7f5ef 100%);
+}
+
+.c-project-content {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(280px, 1.2fr);
+  gap: clamp(1.2rem, 3vw, 2.4rem);
+  align-items: center;
+  margin-top: 1.2rem;
+}
+
+.web-game {
+  padding: 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+
+.web-game-head,
+.web-game-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.web-game-head {
+  margin-bottom: 0.8rem;
+}
+
+.web-game-head h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.web-game-head .project-kicker {
+  margin-bottom: 0.2rem;
+}
+
+.web-game-meta {
+  margin-bottom: 0.8rem;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.web-game-board {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 3px;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 3px;
+  border-radius: 6px;
+  background: var(--pcb);
+}
+
+.web-game-cell {
+  aspect-ratio: 1;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 3px;
+  background: var(--pcb-soft);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.web-game-cell:hover,
+.web-game-cell:focus-visible {
+  background: var(--copper);
+}
+
+.web-game-cell.is-revealed {
+  background: var(--white);
+  color: var(--pcb);
+  cursor: default;
+}
+
+.web-game-cell.is-revealed[data-number="1"] { color: #2b65a8; }
+.web-game-cell.is-revealed[data-number="2"] { color: #32814b; }
+.web-game-cell.is-revealed[data-number="3"] { color: #b34d3b; }
+.web-game-cell.is-flagged { background: var(--copper); }
+
+.web-game-help {
+  margin: 0.8rem 0 0;
+  color: var(--ink-faint);
+  font-size: 0.78rem;
+}
+
 .industry-project {
   background: linear-gradient(135deg, var(--white) 0%, #f6f8f4 100%);
 }
@@ -1387,5 +1481,14 @@ code {
 
   .project-template {
     grid-template-columns: 1fr;
+  }
+
+  .c-project-content {
+    grid-template-columns: 1fr;
+  }
+
+  .web-game-head {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }

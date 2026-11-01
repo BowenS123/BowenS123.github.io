@@ -246,7 +246,7 @@
       <p class="section-kicker mono" data-i18n="projects.kicker">Geselecteerd werk · 02</p>
       <h2 data-i18n="projects.title">Mijn projecten</h2>
       <p class="section-lead" data-i18n="projects.lead">
-        Twee projecten waarin ik hardware, embedded software en industriële automatisering
+        Projecten waarin ik hardware, embedded software, C en industriële automatisering
         samenbreng. Elk project toont mijn rol, het resultaat en de gebruikte technologie.
       </p>
     </div>
@@ -460,6 +460,51 @@
         </div>
       </div>
     </details>
+  </article>
+
+  <!-- PROJECT: C programming & Minesweeper -->
+  <article class="project-card c-project">
+    <div class="project-head">
+      <div>
+        <p class="project-kicker mono" data-i18n="cprogramming.kicker">Eerstejaarsvak · eindproject</p>
+        <h3 data-i18n="cprogramming.title">C programming: Minesweeper</h3>
+        <p class="entry-meta" data-i18n="cprogramming.meta">Jaar 1 · C programming · zelfstandig project</p>
+      </div>
+      <div class="project-actions">
+        <span class="project-status"><span class="status-dot"></span><span data-i18n="project.completed">Gerealiseerd</span></span>
+        <a class="btn btn-ghost btn-sm" href="https://github.com/BowenS123/C-programming" target="_blank" rel="noopener" data-i18n="cprogramming.repo">GitHub Repo</a>
+      </div>
+    </div>
+
+    <div class="c-project-content">
+      <div>
+        <p class="project-summary" data-i18n="cprogramming.summary">
+          Mijn eerste grotere project in C: een terminalversie van Minesweeper. In deze repository staan ook de oefeningen waarmee ik de basis van C leerde, van variabelen en lussen tot functies, arrays en headerbestanden.
+        </p>
+        <div class="tech-stack">
+          <span class="tech-tag">C11</span>
+          <span class="tech-tag">CMake</span>
+          <span class="tech-tag">Arrays</span>
+          <span class="tech-tag">Inputvalidatie</span>
+        </div>
+      </div>
+
+      <div class="web-game" data-minesweeper-game>
+        <div class="web-game-head">
+          <div>
+            <p class="project-kicker mono" data-i18n="cprogramming.demoKicker">Browserdemo</p>
+            <h4 data-i18n="cprogramming.demoTitle">Speel Minesweeper</h4>
+          </div>
+          <button class="btn btn-ghost btn-sm" type="button" data-game-reset data-i18n="cprogramming.newGame">Nieuwe game</button>
+        </div>
+        <div class="web-game-meta">
+          <span data-game-status aria-live="polite"></span>
+          <span><span data-i18n="cprogramming.mines">Mijnen</span>: <strong data-game-mines></strong></span>
+        </div>
+        <div class="web-game-board" data-game-board role="grid" aria-label="Minesweeper board"></div>
+        <p class="web-game-help" data-i18n="cprogramming.demoHelp">Klik om een vakje te openen. Rechtsklik om een vlag te plaatsen.</p>
+      </div>
+    </div>
   </article>
 
   <!-- PROJECT TEMPLATE: kopieer dit blok voor een nieuw project -->

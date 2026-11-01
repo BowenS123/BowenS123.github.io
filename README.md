@@ -28,6 +28,12 @@ QR-scanning, MQTT-communicatie, een robotarm en een ESP32-mixer.
 Een IoT-project met ESP32, LoRa, GPS en een Raspberry Pi-dashboard voor het
 verzamelen en visualiseren van sensordata.
 
+### C programming & Minesweeper
+
+Een eerstejaars C-project met oefeningen rond de basis van de taal en een
+terminalversie van Minesweeper. De portfolio-pagina bevat daarnaast een kleine
+JavaScript-browserdemo, zodat bezoekers de spelregels meteen kunnen uitproberen.
+
 ## Technologieën
 
 `HTML5` · `CSS3` · `JavaScript` · `C` · `C++` · `Python` · `MQTT` · `LoRa` ·

@@ -15,7 +15,7 @@ const translations = {
     "hero.github": "GitHub-profiel",
     "facts.hardware": "Hardware + software",
     "facts.hardwareSub": "Van sensor tot dashboard",
-    "facts.projects": "2 projecten",
+    "facts.projects": "3 projecten",
     "facts.projectsSub": "Uitgewerkt en gedocumenteerd",
     "facts.studySub": "PXL Hogeschool · jaar 3",
     "about.title": "Over mij",
@@ -37,7 +37,7 @@ const translations = {
     "skills.automationSub": "PLC & domotica",
     "projects.kicker": "Geselecteerd werk · 02",
     "projects.title": "Mijn projecten",
-    "projects.lead": "Twee projecten waarin ik hardware, embedded software en industriële automatisering samenbreng. Elk project toont mijn rol, het resultaat en de gebruikte technologie.",
+    "projects.lead": "Projecten waarin ik hardware, embedded software, C en industriële automatisering samenbreng. Elk project toont mijn rol, het resultaat en de gebruikte technologie.",
     "project.contribution": "Mijn bijdrage en resultaten",
     "project.completed": "Prototype afgerond",
     "project.specificContribution": "Mijn specifieke bijdrage",
@@ -53,6 +53,16 @@ const translations = {
     "industry.identification": "productidentificatie",
     "industry.communication": "JSON-communicatie",
     "industry.contribution": "Mijn bijdrage en reflectie",
+    "cprogramming.kicker": "Eerstejaarsvak · eindproject",
+    "cprogramming.title": "C programming: Minesweeper",
+    "cprogramming.meta": "Jaar 1 · C programming · zelfstandig project",
+    "cprogramming.repo": "GitHub Repo",
+    "cprogramming.summary": "Mijn eerste grotere project in C: een terminalversie van Minesweeper. In deze repository staan ook de oefeningen waarmee ik de basis van C leerde, van variabelen en lussen tot functies, arrays en headerbestanden.",
+    "cprogramming.demoKicker": "Browserdemo",
+    "cprogramming.demoTitle": "Speel Minesweeper",
+    "cprogramming.newGame": "Nieuwe game",
+    "cprogramming.mines": "Mijnen",
+    "cprogramming.demoHelp": "Klik om een vakje te openen. Rechtsklik om een vlag te plaatsen.",
     "lora.caption1": "De LoRa-zender met sensoren",
     "lora.caption2": "Node-RED dashboard met live metingen",
     "lora.caption3": "Ontvanger in behuizing (buitenkant)",
@@ -102,7 +112,7 @@ const translations = {
     "hero.github": "GitHub profile",
     "facts.hardware": "Hardware + software",
     "facts.hardwareSub": "From sensor to dashboard",
-    "facts.projects": "2 projects",
+    "facts.projects": "3 projects",
     "facts.projectsSub": "Developed and documented",
     "facts.studySub": "PXL University · year 3",
     "about.title": "About me",
@@ -124,7 +134,7 @@ const translations = {
     "skills.automationSub": "PLC & home automation",
     "projects.kicker": "Selected work · 02",
     "projects.title": "My projects",
-    "projects.lead": "Two projects where I bring together hardware, embedded software and industrial automation. Each project shows my role, the result and the technologies used.",
+    "projects.lead": "Projects where I bring together hardware, embedded software, C and industrial automation. Each project shows my role, the result and the technologies used.",
     "project.contribution": "My contribution and results",
     "project.completed": "Prototype completed",
     "project.specificContribution": "My specific contribution",
@@ -140,6 +150,16 @@ const translations = {
     "industry.identification": "product identification",
     "industry.communication": "JSON communication",
     "industry.contribution": "My contribution and reflection",
+    "cprogramming.kicker": "First-year course · final project",
+    "cprogramming.title": "C programming: Minesweeper",
+    "cprogramming.meta": "Year 1 · C programming · individual project",
+    "cprogramming.repo": "GitHub Repo",
+    "cprogramming.summary": "My first larger C project: a terminal version of Minesweeper. The repository also contains the exercises through which I learned the foundations of C, from variables and loops to functions, arrays and header files.",
+    "cprogramming.demoKicker": "Browser demo",
+    "cprogramming.demoTitle": "Play Minesweeper",
+    "cprogramming.newGame": "New game",
+    "cprogramming.mines": "Mines",
+    "cprogramming.demoHelp": "Click a cell to reveal it. Right-click to place a flag.",
     "lora.caption1": "LoRa transmitter with sensors",
     "lora.caption2": "Node-RED dashboard with live measurements",
     "lora.caption3": "Receiver enclosure (outside)",
@@ -361,6 +381,118 @@ function typeWriter() {
   }
 }
 
+function initMinesweeperGames() {
+  document.querySelectorAll("[data-minesweeper-game]").forEach((gameElement) => {
+    const boardElement = gameElement.querySelector("[data-game-board]");
+    const statusElement = gameElement.querySelector("[data-game-status]");
+    const minesElement = gameElement.querySelector("[data-game-mines]");
+    const resetButton = gameElement.querySelector("[data-game-reset]");
+    const size = 8;
+    const mineCount = 10;
+    let cells;
+    let gameOver;
+
+    function neighbours(row, column) {
+      const positions = [];
+      for (let rowOffset = -1; rowOffset <= 1; rowOffset += 1) {
+        for (let columnOffset = -1; columnOffset <= 1; columnOffset += 1) {
+          const nextRow = row + rowOffset;
+          const nextColumn = column + columnOffset;
+          if (nextRow >= 0 && nextRow < size && nextColumn >= 0 && nextColumn < size) {
+            positions.push(cells[nextRow][nextColumn]);
+          }
+        }
+      }
+      return positions;
+    }
+
+    function updateStatus(message) {
+      statusElement.textContent = message;
+    }
+
+    function render() {
+      boardElement.innerHTML = "";
+      cells.flat().forEach((cell) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "web-game-cell";
+        button.setAttribute("role", "gridcell");
+        button.setAttribute("aria-label", `${cell.row + 1}, ${cell.column + 1}`);
+        if (cell.revealed) {
+          button.classList.add("is-revealed");
+          button.textContent = cell.mine ? "💣" : (cell.count || "");
+          button.dataset.number = cell.count || "";
+        } else if (cell.flagged) {
+          button.classList.add("is-flagged");
+          button.textContent = "⚑";
+        }
+        button.addEventListener("click", () => reveal(cell));
+        button.addEventListener("contextmenu", (event) => {
+          event.preventDefault();
+          toggleFlag(cell);
+        });
+        boardElement.appendChild(button);
+      });
+    }
+
+    function reveal(cell) {
+      if (gameOver || cell.revealed || cell.flagged) return;
+      cell.revealed = true;
+      if (cell.mine) {
+        gameOver = true;
+        cells.flat().forEach((mineCell) => {
+          if (mineCell.mine) mineCell.revealed = true;
+        });
+        updateStatus(currentLanguage === "en" ? "Game over — you hit a mine." : "Game over — je raakte een mijn.");
+        render();
+        return;
+      }
+      if (cell.count === 0) {
+        neighbours(cell.row, cell.column).forEach((nextCell) => {
+          if (!nextCell.mine && !nextCell.revealed) reveal(nextCell);
+        });
+      }
+      if (cells.flat().every((nextCell) => nextCell.mine || nextCell.revealed)) {
+        gameOver = true;
+        updateStatus(currentLanguage === "en" ? "You won — congratulations!" : "Je hebt gewonnen — proficiat!");
+      }
+      render();
+    }
+
+    function toggleFlag(cell) {
+      if (gameOver || cell.revealed) return;
+      cell.flagged = !cell.flagged;
+      render();
+    }
+
+    function start() {
+      gameOver = false;
+      cells = Array.from({ length: size }, (_, row) =>
+        Array.from({ length: size }, (_, column) => ({
+          row, column, mine: false, revealed: false, flagged: false, count: 0
+        }))
+      );
+      let placed = 0;
+      while (placed < mineCount) {
+        const cell = cells[Math.floor(Math.random() * size)][Math.floor(Math.random() * size)];
+        if (!cell.mine) {
+          cell.mine = true;
+          placed += 1;
+        }
+      }
+      cells.flat().forEach((cell) => {
+        if (!cell.mine) cell.count = neighbours(cell.row, cell.column).filter((nextCell) => nextCell.mine).length;
+      });
+      minesElement.textContent = mineCount;
+      updateStatus(currentLanguage === "en" ? "Find all safe cells." : "Vind alle veilige vakjes.");
+      render();
+    }
+
+    resetButton.addEventListener("click", start);
+    start();
+  });
+}
+
 // Slideshow Functionaliteit (Automatisch & Handmatig)
 function initSlideshows() {
   const slideshows = document.querySelectorAll('[data-slideshow]');
@@ -477,6 +609,7 @@ const observer = new IntersectionObserver((entries) => {
 
 window.addEventListener("DOMContentLoaded", () => {
   typeWriter();
+  initMinesweeperGames();
 
   document.querySelectorAll('.project-card, .skill-category-card, .entry-card, .section h2').forEach(el => {
     el.classList.add('reveal');
