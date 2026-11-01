@@ -324,7 +324,7 @@ async function loadGithubRepos() {
         <p class="repo-desc">${repo.description ? escapeHtml(repo.description) : (currentLanguage === "en" ? "No description added." : "Geen beschrijving toegevoegd.")}</p>
         <span class="repo-meta">
           ${repo.language ? `<span><span class="repo-lang-dot"></span>${repo.language}</span>` : ""}
-          <span>bijgewerkt ${timeAgo(repo.updated_at)}</span>
+          <span>${currentLanguage === "en" ? "updated" : "bijgewerkt"} ${timeAgo(repo.updated_at)}</span>
         </span>
       </a>`
       )
