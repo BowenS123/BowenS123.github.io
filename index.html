@@ -45,27 +45,37 @@
       <a class="btn btn-primary" href="#projecten">Bekijk mijn projecten</a>
       <a class="btn btn-ghost" href="https://github.com/BowenS123" target="_blank" rel="noopener">GitHub-profiel</a>
     </div>
+    <ul class="hero-facts" aria-label="Portfolio in cijfers">
+      <li><strong>Hardware + software</strong><span>Van sensor tot dashboard</span></li>
+      <li><strong>2 projecten</strong><span>Uitgewerkt en gedocumenteerd</span></li>
+      <li><strong>Elektronica-ICT</strong><span>PXL Hogeschool · jaar 3</span></li>
+    </ul>
   </div>
 </section>
 
 <!-- wie ben ik -->
 <section id="over-mij" class="section">
   <h2>Over mij</h2>
-  <div class="about-content">
-    <p>
-      Ik ben Bowen Liang, student Elektronica-ICT met een achtergrond in Elektromechanica.
-      Als tech-enthousiasteling hou ik van nieuwe gadgets en zoek ik graag naar manieren
-      om processen te automatiseren en systemen slimmer te maken.
-    </p>
-    <p>
-      Mijn passie ligt bij <strong>hands-on hardware</strong>: het ontwerpen, solderen en testen van
-      fysieke opstellingen, printplaten (PCB's) en microcontrollers. Na mijn opleiding Elektromechanica
-      maakte ik de stap naar de digitale wereld om hardware naadloos te combineren met software.
-    </p>
-    <p>
-      Elektronica-ICT geeft me de tools om geautomatiseerde systemen van A tot Z te ontwerpen,
-      te programmeren en werkend op te leveren, van sensor tot cloud.
-    </p>
+  <div class="about-layout">
+    <div class="about-content">
+      <p class="about-lead">
+        Ik bouw systemen waarin hardware en software samenwerken, van sensor tot dashboard.
+      </p>
+      <p>
+        Ik ben Bowen Liang, student Elektronica-ICT met een achtergrond in Elektromechanica.
+        Als tech-enthousiasteling hou ik van nieuwe gadgets en zoek ik graag naar manieren
+        om processen te automatiseren en systemen slimmer te maken.
+      </p>
+      <p>
+        Mijn passie ligt bij <strong>hands-on hardware</strong>: het ontwerpen, solderen en testen van
+        fysieke opstellingen, printplaten (PCB's) en microcontrollers. Na mijn opleiding Elektromechanica
+        maakte ik de stap naar de digitale wereld om hardware naadloos te combineren met software.
+      </p>
+      <p>
+        Elektronica-ICT geeft me de tools om geautomatiseerde systemen van A tot Z te ontwerpen,
+        te programmeren en werkend op te leveren.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -206,20 +216,30 @@
 
 <!-- projectkaarten -->
 <section id="projecten" class="section">
-  <h2>Mijn projecten</h2>
-  <p class="section-lead">
-    Een selectie van mijn projecten, met mijn eigen bijdrage en de gebruikte technologie.
-  </p>
+  <div class="section-heading">
+    <div>
+      <p class="section-kicker mono">Geselecteerd werk · 02</p>
+      <h2>Mijn projecten</h2>
+      <p class="section-lead">
+        Twee projecten waarin ik hardware, embedded software en industriële automatisering
+        samenbreng. Elk project toont mijn rol, het resultaat en de gebruikte technologie.
+      </p>
+    </div>
+    <span class="section-index mono">PROJECTS / 02</span>
+  </div>
 
   <!-- PROJECT: LoRa -->
   <article class="project-card">
     <div class="project-head">
       <div>
-        <p class="project-kicker mono">Project onderzoek · PXL Digital Green Project</p>
+        <p class="project-kicker mono">Project onderzoek · PXL Digital Lora Project</p>
         <h3>LoRa GPS-tracker met Raspberry Pi-dashboard</h3>
         <p class="entry-meta">Jaar 2, Project onderzoek (42EAI1100)</p>
       </div>
-      <a class="btn btn-ghost btn-sm" href="https://github.com/BowenS123/PXLDIGITAL_GREEN_PROJECT_RESEARCH_Lora" target="_blank" rel="noopener">GitHub Repo</a>
+      <div class="project-actions">
+        <span class="project-status"><span class="status-dot"></span>Gerealiseerd</span>
+        <a class="btn btn-ghost btn-sm" href="https://github.com/BowenS123/PXLDIGITAL_GREEN_PROJECT_RESEARCH_Lora" target="_blank" rel="noopener">GitHub Repo</a>
+      </div>
     </div>
 
     <p class="project-summary">
@@ -300,27 +320,69 @@
   </article>
 
   <!-- PROJECT: Industry 4.0 -->
-  <article class="project-card">
+  <article class="project-card industry-project">
     <div class="project-head">
       <div>
         <p class="project-kicker mono">Project engineering · teamproject</p>
         <h3>Industry 4.0: geautomatiseerde verwerkingslijn</h3>
         <p class="entry-meta">Jaar 3, Project Engineering (43EAI1090/2EAI-PEN), semester 2</p>
       </div>
-      <a class="btn btn-ghost btn-sm" href="https://github.com/BowenS123/2EAI-PEN-2526-Industry4" target="_blank" rel="noopener">GitHub Repo</a>
+      <div class="project-actions">
+        <span class="project-status"><span class="status-dot"></span>Gerealiseerd</span>
+        <a class="btn btn-ghost btn-sm" href="https://github.com/BowenS123/2EAI-PEN-2526-Industry4" target="_blank" rel="noopener">GitHub Repo</a>
+      </div>
     </div>
 
-    <p class="project-summary">
-      Teamproject waarbij een geautomatiseerd systeem werd ontwikkeld dat pannenkoekingrediënten
-      detecteert, weegt en verwerkt via een transportband, QR-visioncamera, robotarm en mixer,
-      gecoördineerd door een Beckhoff PLC via MQTT.
-    </p>
+    <div class="industry-project-intro">
+      <div>
+        <p class="project-summary">
+          Een semi-geautomatiseerde productielijn voor het identificeren, wegen en verwerken van
+          pannenkoekingrediënten. De Beckhoff PLC coördineert de transportband, QR-camera,
+          robotarm, weegschaal, inductieve sensor en mixer.
+        </p>
+        <div class="industry-stats">
+          <div><strong>4</strong><span>hoofdmodules</span></div>
+          <div><strong>QR</strong><span>productidentificatie</span></div>
+          <div><strong>MQTT</strong><span>JSON-communicatie</span></div>
+        </div>
+      </div>
+      <div class="industry-project-gallery project-slideshow" data-slideshow>
+        <div class="slideshow-container">
+          <div class="slide active">
+            <img src="assets/projecten/industry4/0_Final_Result.drawio.png" alt="Overzicht van de finale Industry 4.0-verwerkingslijn" loading="lazy">
+            <span class="caption">Systeemoverzicht van de productielijn</span>
+          </div>
+          <div class="slide">
+            <img src="assets/projecten/industry4/0_HardwareDiagram.png" alt="Hardwarearchitectuur van het Industry 4.0-systeem" loading="lazy">
+            <span class="caption">Hardwarearchitectuur en koppelingen</span>
+          </div>
+          <div class="slide">
+            <img src="assets/projecten/industry4/Testcamera.png" alt="Test van de visioncamera in TwinCAT" loading="lazy">
+            <span class="caption">Visioncamera testen in TwinCAT</span>
+          </div>
+          <div class="slide">
+            <img src="assets/projecten/industry4/BeckhoffDashboard.png" alt="Beckhoff TwinCAT-dashboard met statuspanelen voor de productielijn" loading="lazy">
+            <span class="caption">Beckhoff-dashboard voor bediening en diagnose</span>
+          </div>
+          <div class="slide">
+            <img src="assets/projecten/industry4/QrVisionScan.png" alt="TwinCAT Vision die een QR-code detecteert met een rode contour" loading="lazy">
+            <span class="caption">QR-code gedetecteerd door TwinCAT Vision</span>
+          </div>
+          <button class="slide-prev" aria-label="Vorige Industry 4.0-foto">&#10094;</button>
+          <button class="slide-next" aria-label="Volgende Industry 4.0-foto">&#10095;</button>
+        </div>
+        <div class="slideshow-dots" aria-label="Industry 4.0-foto's">
+          <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+      </div>
+    </div>
 
     <div class="tech-stack">
       <span class="tech-tag">Beckhoff TwinCAT 3</span>
       <span class="tech-tag">PSoC 6 / ModusToolbox</span>
       <span class="tech-tag">MQTT</span>
       <span class="tech-tag">EtherCAT</span>
+      <span class="tech-tag">TwinCAT Vision · QR</span>
       <span class="tech-tag">ESP32</span>
     </div>
 
@@ -329,35 +391,69 @@
       <div class="details-content">
         <h4>Mijn specifieke bijdrage</h4>
         <p>
-          Ik configureerde de EtherCAT-aansturing van de transportbandmotor (EL7332, CoE-parameters,
-          NC-as), bouwde de MQTT-communicatie tussen de robotarm en de PLC uit, en schreef de volledige Application Note.
+          Mijn belangrijkste bijdrage was de configuratie van de transportbandmotor via de
+          EL7332 EtherCAT-terminal, inclusief CoE-parameters en de NC-as. Daarnaast werkte ik aan
+          de PSoC6-robotarm en de MQTT-communicatie met de PLC. De berichten werden als JSON
+          verstuurd, zodat commando’s, statussen en foutmeldingen gestructureerd uitgewisseld
+          konden worden. Ook werkte ik mee aan TwinCAT Vision: de GIGE-camera leest in
+          <code>FB_QrVision</code> QR-codes als Mono8-beeld en geeft de scanstatus door aan de
+          PLC. Tot slot schreef ik mee aan de Application Note en documenteerde ik de technische
+          werking, tests en gebruikersbediening.
         </p>
 
         <h4>Reflectie (Korthagenmodel)</h4>
         <div class="reflectie-steps">
           <div class="reflectie-step">
             <span class="step-label mono">Fase 1: Situatie</span>
-            <p>Presentatie van het Industry 4.0-project. Mijn focus lag op de EtherCAT-motorsturing en MQTT-communicatie.</p>
+            <p>Voor de semi-geautomatiseerde productielijn werkte ik aan EtherCAT-motorsturing,
+              de PSoC6-robotarm, MQTT/JSON-communicatie en QR-detectie met TwinCAT Vision.</p>
           </div>
           <div class="reflectie-step">
             <span class="step-label mono">Fase 2: Terugblik</span>
-            <p>Mijn individuele bijdrage was aanvankelijk minder zichtbaar op GitHub doordat we direct op de main branch werkten.</p>
+            <p>De afzonderlijke subsystemen werkten betrouwbaar in hun eigen testomgeving.
+              De volledige integratie was nog niet afgerond, waardoor timing en foutafhandeling
+              over de hele lijn verder getest moesten worden.</p>
           </div>
           <div class="reflectie-step">
             <span class="step-label mono">Fase 3: Kernkenmerken</span>
-            <p>Samenwerken vraagt niet alleen een goed werkend systeem, maar ook duidelijke, navolgbare versiebeheer-discipline.</p>
+            <p>De modulaire aanpak was een sterke keuze: de PLC coördineert, terwijl de PSoC6
+              en ESP32 hun eigen taak uitvoeren. Duidelijke MQTT-topics, statusfeedback en een
+              overzichtelijke HMI zijn daarbij essentieel.</p>
           </div>
           <div class="reflectie-step">
             <span class="step-label mono">Fase 4: Alternatieven</span>
-            <p>Werken via feature branches en PR's voor elke taak, gecombineerd met een heldere rolverdeling.</p>
+            <p>Ik zou vooraf een duidelijke rolverdeling, vaste feature branches en gezamenlijke
+              integratietests afspreken. Vooral de timing tussen transportband, vision en robotarm
+              moet vanaf het begin als één keten getest worden.</p>
           </div>
           <div class="reflectie-step">
             <span class="step-label mono">Fase 5: Uitproberen</span>
-            <p>Bij volgende projecten consequent met branches en pull requests werken om de progressie aantoonbaar te maken.</p>
+            <p>Bij een volgende iteratie zou ik eerst de afzonderlijke tests automatiseren en
+              daarna stapsgewijs de volledige cyclus valideren: QR-scan, wegen, metaaldetectie,
+              mengen en foutafhandeling onder continue belasting.</p>
           </div>
         </div>
       </div>
     </details>
+  </article>
+
+  <!-- PROJECT TEMPLATE: kopieer dit blok voor een nieuw project -->
+  <article class="project-card project-template" aria-label="Template voor een toekomstig project">
+    <div class="template-mark mono">+</div>
+    <div>
+      <p class="project-kicker mono">Project template · klaar voor invulling</p>
+      <h3>Jouw volgende project</h3>
+      <p class="project-summary">
+        Voeg hier een korte beschrijving toe van het probleem, jouw oplossing en het resultaat.
+        Gebruik de bestaande projectkaart als basis voor foto’s, technologieën en reflectie.
+      </p>
+      <div class="tech-stack">
+        <span class="tech-tag">Technologie</span>
+        <span class="tech-tag">Jouw rol</span>
+        <span class="tech-tag">Resultaat</span>
+      </div>
+      <p class="template-hint mono">Kopieer dit artikel in index.html en vervang de voorbeeldtekst.</p>
+    </div>
   </article>
 </section>
 
@@ -390,67 +486,47 @@
 <!-- tijdlijn -->
 <section id="tijdlijn" class="section">
   <div class="section-inner">
-    <h2>Mijn tijdlijn</h2>
-    <p class="section-lead">Mijn traject doorheen de 3 jaar Elektronica-ICT, met de status per vak.</p>
+    <p class="section-kicker mono">Ontwikkeling · van basis naar systeem</p>
+    <h2>Mijn projecttijdlijn</h2>
+    <p class="section-lead">Geen losse vakkenlijst, maar de projecten waarin ik mijn kennis stap voor stap toepaste.</p>
 
-    <div class="timeline-year" style="margin-top:2.2rem;">
-      <div class="timeline-marker mono">Jaar 1</div>
-      <div class="timeline-items">
-        <div class="entry-card">
-          <div class="course-row"><span><span class="course-code">41EAI1270</span>Analog electronics 1</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">41EAI1280</span>Electric fundamentals</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">41EAI1020</span>Analog electronics 2</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">41EAI1290</span>Industrial system</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">41EAI1040</span>Microcontrollers</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">41EAI1130</span>Digital electronics</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">41EAI1060</span>Mechatronics</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">41EAI1080</span>C programming</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">41EAI1100</span>Networked devices</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">41EAI1300</span>Hardware production</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">41EAI1310</span>Communication skills 1</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">41EAI1320</span>PCB design</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">41EAI1070</span>Webtechnologie</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">41EAI1090</span>C programmeren 2</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">41EAI1030</span>Digitale technieken</span><span class="course-status done">voltooid</span></div>
+    <div class="project-timeline">
+      <article class="timeline-project">
+        <div class="timeline-marker mono">Jaar 1</div>
+        <div class="timeline-project-body">
+          <p class="project-kicker mono">Fundament</p>
+          <h3>Elektronica, microcontrollers en PCB-design</h3>
+          <p>Ik bouwde de basis op in C, digitale technieken, mechatronica en hardwareproductie. Daardoor leerde ik schakelingen niet alleen ontwerpen, maar ook meten, testen en documenteren.</p>
+          <div class="tech-stack"><span class="tech-tag">C</span><span class="tech-tag">Microcontrollers</span><span class="tech-tag">PCB design</span></div>
         </div>
-      </div>
-    </div>
-
-    <div class="timeline-year">
-      <div class="timeline-marker mono">Jaar 2</div>
-      <div class="timeline-items">
-        <div class="entry-card">
-          <div class="course-row"><span><span class="course-code">42EAI1010</span>Elektronische systemen 1</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">42EAI1020</span>Elektronische systemen 2</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">42EAI1030</span>C++ programmeren</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">42EAI1040</span>Embedded Systemen</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">42EAI1050</span>System on Chip</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">42EAI1060</span>Building automation</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">42EAI1070</span>IoT technologie</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">42EAI1080</span>Network Programming</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">42EAI1140</span>Hardware Accelerated Computing</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">42EAI1100</span>Project onderzoek</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">42EAI1130</span>Project engineering</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">42EAI1120</span>Audio Processing</span><span class="course-status done">voltooid</span></div>
+      </article>
+      <article class="timeline-project">
+        <div class="timeline-marker mono">Jaar 2</div>
+        <div class="timeline-project-body">
+          <p class="project-kicker mono">Project onderzoek · afgerond</p>
+          <h3><a href="#projecten">LoRa GPS-tracker</a></h3>
+          <p>Een eerste volledig systeemproject: sensordata verzamelen met een ESP32, draadloos versturen via LoRa en visualiseren op een Raspberry Pi-dashboard.</p>
+          <div class="tech-stack"><span class="tech-tag">ESP32</span><span class="tech-tag">LoRa</span><span class="tech-tag">GPS</span><span class="tech-tag">Raspberry Pi</span></div>
         </div>
-      </div>
-    </div>
-
-    <div class="timeline-year">
-      <div class="timeline-marker mono is-open">Jaar 3</div>
-      <div class="timeline-items">
-        <div class="entry-card">
-          <div class="course-row"><span><span class="course-code">43EAI1010</span>Digitale communicatie</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">43EAI1020</span>Industrial automation</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">43EAI1030</span>Smart systems</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">43EAI1040</span>Image Processing</span><span class="course-status pending">nog te doen</span></div>
-          <div class="course-row"><span><span class="course-code">43EAI1050</span>Embedded Operating System</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">43EAI1100</span>Project embedded</span><span class="course-status done">voltooid</span></div>
-          <div class="course-row"><span><span class="course-code">43EAI1070</span>Professional Innovation</span><span class="course-status pending">nog te doen</span></div>
-          <div class="course-row"><span><span class="course-code">43EAI1090</span>Project X</span><span class="course-status pending">in uitvoering</span></div>
-          <div class="course-row"><span><span class="course-code">43EAI1110</span>Stage en bachelorproef</span><span class="course-status pending">nog te doen</span></div>
+      </article>
+      <article class="timeline-project">
+        <div class="timeline-marker mono is-open">Jaar 3</div>
+        <div class="timeline-project-body">
+          <p class="project-kicker mono">Project engineering · gerealiseerd</p>
+          <h3><a href="#projecten">Industry 4.0-verwerkingslijn</a></h3>
+          <p>Mijn meest geïntegreerde project tot nu toe: PLC-automatisatie, TwinCAT Vision voor QR-scanning, MQTT-communicatie, een robotarm en een ESP32-mixer in één productielijn.</p>
+          <div class="tech-stack"><span class="tech-tag">TwinCAT</span><span class="tech-tag">MQTT</span><span class="tech-tag">TwinCAT Vision</span><span class="tech-tag">Embedded C++</span></div>
         </div>
-      </div>
+      </article>
+      <article class="timeline-project timeline-project-next">
+        <div class="timeline-marker mono">Volgende stap</div>
+        <div class="timeline-project-body">
+          <p class="project-kicker mono">In voorbereiding</p>
+          <h3>Stage en bachelorproef</h3>
+          <p>De volgende stap is mijn ervaring verdiepen in een professionele omgeving, met focus op embedded software, industriële automatisatie en betrouwbare systeemintegratie.</p>
+          <div class="tech-stack"><span class="tech-tag">Stage</span><span class="tech-tag">Bachelorproef</span></div>
+        </div>
+      </article>
     </div>
   </div>
 </section>

@@ -80,7 +80,7 @@ async function loadGithubRepos() {
       .map(
         (repo) => `
       <a class="repo-card reveal" href="${repo.html_url}" target="_blank" rel="noopener">
-        <span class="repo-name">${repo.name}</span>
+        <span class="repo-name">${escapeHtml(repo.name)}</span>
         <p class="repo-desc">${repo.description ? escapeHtml(repo.description) : "Geen beschrijving toegevoegd."}</p>
         <span class="repo-meta">
           ${repo.language ? `<span><span class="repo-lang-dot"></span>${repo.language}</span>` : ""}
@@ -133,6 +133,8 @@ function initSlideshows() {
     let currentSlide = 0;
     let autoSlideTimer;
 
+    if (!slides.length) return;
+
     function showSlide(n) {
       slides.forEach(s => s.classList.remove('active'));
       dots.forEach(d => d.classList.remove('active'));
@@ -169,6 +171,10 @@ function initSlideshows() {
     }
 
     dots.forEach((dot, idx) => {
+      if (idx >= slides.length) {
+        dot.hidden = true;
+        return;
+      }
       dot.addEventListener('click', () => {
         showSlide(idx);
         startTimer();
