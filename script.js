@@ -60,6 +60,7 @@ const translations = {
     "cprogramming.summary": "Mijn eerste grotere project in C: een terminalversie van Minesweeper. In deze repository staan ook de oefeningen waarmee ik de basis van C leerde, van variabelen en lussen tot functies, arrays en headerbestanden.",
     "cprogramming.demoKicker": "Browserdemo",
     "cprogramming.demoTitle": "Speel Minesweeper",
+    "cprogramming.flagMode": "Vlagmodus",
     "cprogramming.newGame": "Nieuwe game",
     "cprogramming.mines": "Mijnen",
     "cprogramming.demoHelp": "Klik om een vakje te openen. Rechtsklik om een vlag te plaatsen.",
@@ -157,6 +158,7 @@ const translations = {
     "cprogramming.summary": "My first larger C project: a terminal version of Minesweeper. The repository also contains the exercises through which I learned the foundations of C, from variables and loops to functions, arrays and header files.",
     "cprogramming.demoKicker": "Browser demo",
     "cprogramming.demoTitle": "Play Minesweeper",
+    "cprogramming.flagMode": "Flag mode",
     "cprogramming.newGame": "New game",
     "cprogramming.mines": "Mines",
     "cprogramming.demoHelp": "Click a cell to reveal it. Right-click to place a flag.",
@@ -386,11 +388,13 @@ function initMinesweeperGames() {
     const boardElement = gameElement.querySelector("[data-game-board]");
     const statusElement = gameElement.querySelector("[data-game-status]");
     const minesElement = gameElement.querySelector("[data-game-mines]");
+    const modeButton = gameElement.querySelector("[data-game-mode]");
     const resetButton = gameElement.querySelector("[data-game-reset]");
     const size = 8;
     const mineCount = 10;
     let cells;
     let gameOver;
+    let flagMode = false;
 
     function neighbours(row, column) {
       const positions = [];
@@ -426,7 +430,13 @@ function initMinesweeperGames() {
           button.classList.add("is-flagged");
           button.textContent = "⚑";
         }
-        button.addEventListener("click", () => reveal(cell));
+        button.addEventListener("click", () => {
+          if (flagMode) {
+            toggleFlag(cell);
+          } else {
+            reveal(cell);
+          }
+        });
         button.addEventListener("contextmenu", (event) => {
           event.preventDefault();
           toggleFlag(cell);
@@ -467,6 +477,7 @@ function initMinesweeperGames() {
 
     function start() {
       gameOver = false;
+      flagMode = false;
       cells = Array.from({ length: size }, (_, row) =>
         Array.from({ length: size }, (_, column) => ({
           row, column, mine: false, revealed: false, flagged: false, count: 0
@@ -484,10 +495,16 @@ function initMinesweeperGames() {
         if (!cell.mine) cell.count = neighbours(cell.row, cell.column).filter((nextCell) => nextCell.mine).length;
       });
       minesElement.textContent = mineCount;
+      modeButton.classList.remove("is-active");
       updateStatus(currentLanguage === "en" ? "Find all safe cells." : "Vind alle veilige vakjes.");
       render();
     }
 
+    modeButton.addEventListener("click", () => {
+      flagMode = !flagMode;
+      modeButton.classList.toggle("is-active", flagMode);
+      modeButton.setAttribute("aria-pressed", String(flagMode));
+    });
     resetButton.addEventListener("click", start);
     start();
   });

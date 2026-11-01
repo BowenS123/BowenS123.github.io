@@ -800,6 +800,18 @@ p:last-child { margin-bottom: 0; }
   margin-bottom: 0.8rem;
 }
 
+.web-game-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.web-game-actions .is-active {
+  border-color: var(--copper);
+  background: var(--copper-tint);
+  color: var(--copper);
+}
+
 .web-game-head h4 {
   margin: 0;
   font-size: 1.1rem;
