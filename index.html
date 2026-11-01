@@ -13,16 +13,17 @@
 <header class="topbar">
   <div class="topbar-inner">
     <a class="brand" href="#top">Bowen Liang</a>
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="topnav">Menu</button>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="topnav" data-i18n="menu">Menu</button>
     <nav class="topnav" id="topnav">
-      <a href="#over-mij">Over mij</a>
-      <a href="#vaardigheden">Vaardigheden</a>
-      <a href="#projecten">Projecten</a>
+      <a href="#over-mij" data-i18n="nav.about">Over mij</a>
+      <a href="#vaardigheden" data-i18n="nav.skills">Vaardigheden</a>
+      <a href="#projecten" data-i18n="nav.projects">Projecten</a>
       <a href="#github">GitHub</a>
-      <a href="#tijdlijn">Tijdlijn</a>
-      <a href="#certificaten">Certificaten</a>
-      <a href="#contact">Contact</a>
+      <a href="#tijdlijn" data-i18n="nav.timeline">Tijdlijn</a>
+      <a href="#certificaten" data-i18n="nav.certificates">Certificaten</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
+    <button class="language-toggle mono" id="languageToggle" type="button" aria-label="Switch language">EN</button>
   </div>
 </header>
 
@@ -31,49 +32,49 @@
 <!-- intro -->
 <section class="hero">
   <div class="hero-inner">
-    <p class="hero-eyebrow mono">PXL Hogeschool · Elektronica-ICT · Jaar 3</p>
+    <p class="hero-eyebrow mono" data-i18n="hero.eyebrow">PXL Hogeschool · Elektronica-ICT · Jaar 3</p>
     <h1>Bowen <span class="hero-lastname">Liang</span></h1>
     <p class="hero-role">
       <span id="typing-text"></span><span class="cursor">|</span>
     </p>
     <p class="hero-desc">
-      Student Elektronica-ICT met een sterke achtergrond in Elektromechanica. Ik combineer
+      <span data-i18n="hero.description">Student Elektronica-ICT met een sterke achtergrond in Elektromechanica. Ik combineer
       hardware en software om processen slimmer en efficiënter te maken, van hands-on hardware
-      en PCB-ontwerp tot embedded code. Deze pagina bundelt mijn projecten en GitHub-werk.
+      en PCB-ontwerp tot embedded code. Deze pagina bundelt mijn projecten en GitHub-werk.</span>
     </p>
     <div class="hero-links">
-      <a class="btn btn-primary" href="#projecten">Bekijk mijn projecten</a>
-      <a class="btn btn-ghost" href="https://github.com/BowenS123" target="_blank" rel="noopener">GitHub-profiel</a>
+      <a class="btn btn-primary" href="#projecten" data-i18n="hero.projects">Bekijk mijn projecten</a>
+      <a class="btn btn-ghost" href="https://github.com/BowenS123" target="_blank" rel="noopener" data-i18n="hero.github">GitHub-profiel</a>
     </div>
     <ul class="hero-facts" aria-label="Portfolio in cijfers">
-      <li><strong>Hardware + software</strong><span>Van sensor tot dashboard</span></li>
-      <li><strong>2 projecten</strong><span>Uitgewerkt en gedocumenteerd</span></li>
-      <li><strong>Elektronica-ICT</strong><span>PXL Hogeschool · jaar 3</span></li>
+      <li><strong data-i18n="facts.hardware">Hardware + software</strong><span data-i18n="facts.hardwareSub">Van sensor tot dashboard</span></li>
+      <li><strong data-i18n="facts.projects">2 projecten</strong><span data-i18n="facts.projectsSub">Uitgewerkt en gedocumenteerd</span></li>
+      <li><strong>Elektronica-ICT</strong><span data-i18n="facts.studySub">PXL Hogeschool · jaar 3</span></li>
     </ul>
   </div>
 </section>
 
 <!-- wie ben ik -->
 <section id="over-mij" class="section">
-  <h2>Over mij</h2>
+  <h2 data-i18n="about.title">Over mij</h2>
   <div class="about-layout">
     <div class="about-content">
       <p class="about-lead">
-        Ik bouw systemen waarin hardware en software samenwerken, van sensor tot dashboard.
+        <span data-i18n="about.lead">Ik bouw systemen waarin hardware en software samenwerken, van sensor tot dashboard.</span>
       </p>
       <p>
-        Ik ben Bowen Liang, student Elektronica-ICT met een achtergrond in Elektromechanica.
+        <span data-i18n="about.p1">Ik ben Bowen Liang, student Elektronica-ICT met een achtergrond in Elektromechanica.
         Als tech-enthousiasteling hou ik van nieuwe gadgets en zoek ik graag naar manieren
-        om processen te automatiseren en systemen slimmer te maken.
+        om processen te automatiseren en systemen slimmer te maken.</span>
       </p>
       <p>
-        Mijn passie ligt bij <strong>hands-on hardware</strong>: het ontwerpen, solderen en testen van
+        <span data-i18n="about.p2">Mijn passie ligt bij <strong>hands-on hardware</strong>: het ontwerpen, solderen en testen van
         fysieke opstellingen, printplaten (PCB's) en microcontrollers. Na mijn opleiding Elektromechanica
-        maakte ik de stap naar de digitale wereld om hardware naadloos te combineren met software.
+        maakte ik de stap naar de digitale wereld om hardware naadloos te combineren met software.</span>
       </p>
       <p>
-        Elektronica-ICT geeft me de tools om geautomatiseerde systemen van A tot Z te ontwerpen,
-        te programmeren en werkend op te leveren.
+        <span data-i18n="about.p3">Elektronica-ICT geeft me de tools om geautomatiseerde systemen van A tot Z te ontwerpen,
+        te programmeren en werkend op te leveren.</span>
       </p>
     </div>
   </div>
@@ -82,8 +83,8 @@
 <!-- vaardigheden -->
 <section id="vaardigheden" class="section section-alt">
   <div class="section-inner">
-    <h2>Mijn vaardigheden</h2>
-    <p class="section-lead">
+    <h2 data-i18n="skills.title">Mijn vaardigheden</h2>
+    <p class="section-lead" data-i18n="skills.lead">
       Tijdens mijn opleiding ontwikkelde ik vaardigheden in programmeren, embedded systems,
       FPGA-ontwikkeling, netwerken en industriële automatisering. Klik op een badge voor meer informatie.
     </p>
@@ -91,8 +92,8 @@
     <div class="skills-grid">
 
       <div class="skill-category-card">
-        <h3>Programmeren</h3>
-        <p class="xfactor-sub">Software en talen</p>
+        <h3 data-i18n="skills.programming">Programmeren</h3>
+        <p class="xfactor-sub" data-i18n="skills.programmingSub">Software en talen</p>
         <div class="skill-badges">
           <a href="https://en.cppreference.com/w/c" target="_blank" rel="noopener" class="skill-badge">
             <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/c/c-original.svg" alt="" data-mono="C" data-color="#5C6BC0">
@@ -126,8 +127,8 @@
       </div>
 
       <div class="skill-category-card">
-        <h3>Embedded systems</h3>
-        <p class="xfactor-sub">Hardware &amp; microcontrollers</p>
+        <h3 data-i18n="skills.embedded">Embedded systems</h3>
+        <p class="xfactor-sub" data-i18n="skills.embeddedSub">Hardware &amp; microcontrollers</p>
         <div class="skill-badges">
           <a href="https://www.espressif.com/en/products/socs/esp32" target="_blank" rel="noopener" class="skill-badge">
             <img class="skill-icon" src="https://cdn.simpleicons.org/espressif/E7352C" alt="" data-mono="ES" data-color="#E7352C">
@@ -161,8 +162,8 @@
       </div>
 
       <div class="skill-category-card">
-        <h3>FPGA &amp; hardware acceleration</h3>
-        <p class="xfactor-sub">Digitale logica en SoC-ontwikkeling</p>
+        <h3 data-i18n="skills.fpga">FPGA &amp; hardware acceleration</h3>
+        <p class="xfactor-sub" data-i18n="skills.fpgaSub">Digitale logica en SoC-ontwikkeling</p>
         <div class="skill-badges">
           <a href="https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/vitis.html" target="_blank" rel="noopener" class="skill-badge">
             <span class="skill-mono" style="--mono:#B24C2D">VI</span>
@@ -180,8 +181,8 @@
       </div>
 
       <div class="skill-category-card">
-        <h3>Netwerken &amp; protocollen</h3>
-        <p class="xfactor-sub">Communicatiestandaarden</p>
+        <h3 data-i18n="skills.networks">Netwerken &amp; protocollen</h3>
+        <p class="xfactor-sub" data-i18n="skills.networksSub">Communicatiestandaarden</p>
         <div class="skill-badges">
           <a href="https://mqtt.org/" target="_blank" rel="noopener" class="skill-badge">
             <img class="skill-icon" src="https://cdn.simpleicons.org/mqtt/660066" alt="" data-mono="MQ" data-color="#660066">
@@ -211,8 +212,8 @@
       </div>
 
       <div class="skill-category-card">
-        <h3>Automatisering</h3>
-        <p class="xfactor-sub">PLC &amp; domotica</p>
+        <h3 data-i18n="skills.automation">Automatisering</h3>
+        <p class="xfactor-sub" data-i18n="skills.automationSub">PLC &amp; domotica</p>
         <div class="skill-badges">
           <a href="https://www.beckhoff.com/" target="_blank" rel="noopener" class="skill-badge">
             <span class="skill-mono" style="--mono:#E4501E">BK</span>
@@ -241,9 +242,9 @@
 <section id="projecten" class="section">
   <div class="section-heading">
     <div>
-      <p class="section-kicker mono">Geselecteerd werk · 02</p>
-      <h2>Mijn projecten</h2>
-      <p class="section-lead">
+      <p class="section-kicker mono" data-i18n="projects.kicker">Geselecteerd werk · 02</p>
+      <h2 data-i18n="projects.title">Mijn projecten</h2>
+      <p class="section-lead" data-i18n="projects.lead">
         Twee projecten waarin ik hardware, embedded software en industriële automatisering
         samenbreng. Elk project toont mijn rol, het resultaat en de gebruikte technologie.
       </p>
@@ -255,17 +256,17 @@
   <article class="project-card">
     <div class="project-head">
       <div>
-        <p class="project-kicker mono">Project onderzoek · PXL Digital Lora Project</p>
-        <h3>LoRa GPS-tracker met Raspberry Pi-dashboard</h3>
-        <p class="entry-meta">Jaar 2, Project onderzoek (42EAI1100)</p>
+        <p class="project-kicker mono" data-i18n="lora.kicker">Project onderzoek · PXL Digital Lora Project</p>
+        <h3 data-i18n="lora.title">LoRa GPS-tracker met Raspberry Pi-dashboard</h3>
+        <p class="entry-meta" data-i18n="lora.meta">Jaar 2, Project onderzoek (42EAI1100)</p>
       </div>
       <div class="project-actions">
-        <span class="project-status"><span class="status-dot"></span>Gerealiseerd</span>
+        <span class="project-status"><span class="status-dot"></span><span data-i18n="project.completed">Gerealiseerd</span></span>
         <a class="btn btn-ghost btn-sm" href="https://github.com/BowenS123/PXLDIGITAL_GREEN_PROJECT_RESEARCH_Lora" target="_blank" rel="noopener">GitHub Repo</a>
       </div>
     </div>
 
-    <p class="project-summary">
+    <p class="project-summary" data-i18n="lora.summary">
       Een batterijgevoede ESP32-zender meet locatie, temperatuur en lichtniveau en stuurt die via LoRa
       (868 MHz) naar een Raspberry Pi 5. Daar worden de gegevens getoond op een Node-RED-dashboard
       en op een LCD-scherm. Tijdens een veldtest haalde het systeem een betrouwbaar bereik van
@@ -276,23 +277,23 @@
       <div class="slideshow-container">
         <div class="slide active">
           <img data-src="ZenderLora.png" alt="De LoRa-zender" loading="lazy">
-          <span class="caption">De LoRa-zender met sensoren</span>
+          <span class="caption" data-i18n="lora.caption1">De LoRa-zender met sensoren</span>
         </div>
         <div class="slide">
           <img data-src="DashboardExample.png" alt="Node-RED dashboard" loading="lazy">
-          <span class="caption">Node-RED dashboard met live metingen</span>
+          <span class="caption" data-i18n="lora.caption2">Node-RED dashboard met live metingen</span>
         </div>
         <div class="slide">
           <img data-src="ReceiverCaseOutside.png" alt="Behuizing van de ontvanger, buitenkant" loading="lazy">
-          <span class="caption">Ontvanger in behuizing (buitenkant)</span>
+          <span class="caption" data-i18n="lora.caption3">Ontvanger in behuizing (buitenkant)</span>
         </div>
         <div class="slide">
           <img data-src="ReceiverCaseInside.png" alt="Behuizing van de ontvanger, binnenkant" loading="lazy">
-          <span class="caption">Ontvanger in behuizing (binnenkant)</span>
+          <span class="caption" data-i18n="lora.caption4">Ontvanger in behuizing (binnenkant)</span>
         </div>
         <div class="slide">
           <img data-src="MapTestDistance.png" alt="Afstandstest op de kaart" loading="lazy">
-          <span class="caption">Veldtest: bereik van ongeveer 1,1 km</span>
+          <span class="caption" data-i18n="lora.caption5">Veldtest: bereik van ongeveer 1,1 km</span>
         </div>
         <button class="slide-prev" aria-label="Vorige foto">&#10094;</button>
         <button class="slide-next" aria-label="Volgende foto">&#10095;</button>
@@ -314,16 +315,16 @@
     </div>
 
     <details class="reflectie-block">
-      <summary>Mijn bijdrage en resultaten</summary>
+      <summary data-i18n="project.contribution">Mijn bijdrage en resultaten</summary>
       <div class="details-content">
-        <h4>Mijn specifieke bijdrage</h4>
-        <p>
+        <h4 data-i18n="project.specificContribution">Mijn specifieke bijdrage</h4>
+        <p data-i18n="lora.contribution">
           Ik schreef de application note van de zender, bouwde de ESP32-firmware met GPS en
           temperatuurmeting, en ontwierp de batterijvoeding (Li-ion, TP4056-lader en step-up converter)
           met stroommetingen van het slaapverbruik. Daarnaast werkte ik mee aan de Node-RED-flow
           en het dashboard van de ontvanger.
         </p>
-        <h4>Resultaten</h4>
+        <h4 data-i18n="project.results">Resultaten</h4>
         <div class="reflectie-steps">
           <div class="reflectie-step">
             <span class="step-label mono">Bereik</span>
@@ -346,27 +347,27 @@
   <article class="project-card industry-project">
     <div class="project-head">
       <div>
-        <p class="project-kicker mono">Project engineering · teamproject</p>
-        <h3>Industry 4.0: geautomatiseerde verwerkingslijn</h3>
-        <p class="entry-meta">Jaar 3, Project Engineering (43EAI1090/2EAI-PEN), semester 2</p>
+        <p class="project-kicker mono" data-i18n="industry.kicker">Project engineering · teamproject</p>
+        <h3 data-i18n="industry.title">Industry 4.0: geautomatiseerde verwerkingslijn</h3>
+        <p class="entry-meta" data-i18n="industry.meta">Jaar 2, Project Engineering (43EAI1090/2EAI-PEN), semester 2</p>
       </div>
       <div class="project-actions">
-        <span class="project-status"><span class="status-dot"></span>Gerealiseerd</span>
+        <span class="project-status"><span class="status-dot"></span><span data-i18n="project.completed">Gerealiseerd</span></span>
         <a class="btn btn-ghost btn-sm" href="https://github.com/BowenS123/2EAI-PEN-2526-Industry4" target="_blank" rel="noopener">GitHub Repo</a>
       </div>
     </div>
 
     <div class="industry-project-intro">
       <div>
-        <p class="project-summary">
+        <p class="project-summary" data-i18n="industry.summary">
           Een semi-geautomatiseerde productielijn voor het identificeren, wegen en verwerken van
           pannenkoekingrediënten. De Beckhoff PLC coördineert de transportband, QR-camera,
           robotarm, weegschaal, inductieve sensor en mixer.
         </p>
         <div class="industry-stats">
-          <div><strong>4</strong><span>hoofdmodules</span></div>
-          <div><strong>QR</strong><span>productidentificatie</span></div>
-          <div><strong>MQTT</strong><span>JSON-communicatie</span></div>
+          <div><strong>4</strong><span data-i18n="industry.modules">hoofdmodules</span></div>
+          <div><strong>QR</strong><span data-i18n="industry.identification">productidentificatie</span></div>
+          <div><strong>MQTT</strong><span data-i18n="industry.communication">JSON-communicatie</span></div>
         </div>
       </div>
       <div class="industry-project-gallery project-slideshow" data-slideshow>
@@ -410,7 +411,7 @@
     </div>
 
     <details class="reflectie-block">
-      <summary>Mijn bijdrage en reflectie</summary>
+      <summary data-i18n="industry.contribution">Mijn bijdrage en reflectie</summary>
       <div class="details-content">
         <h4>Mijn specifieke bijdrage</h4>
         <p>
@@ -485,16 +486,16 @@
   <div class="section-inner">
     <div class="github-feed-head">
       <div>
-        <h2>Live vanaf GitHub</h2>
+        <h2 data-i18n="github.title">Live vanaf GitHub</h2>
         <p class="section-lead" style="margin-top:0.4rem;">
-          Automatisch gesynchroniseerd met mijn profiel (<a href="https://github.com/BowenS123" target="_blank" rel="noopener">@BowenS123</a>).
+          <span data-i18n="github.lead">Automatisch gesynchroniseerd met mijn profiel</span> (<a href="https://github.com/BowenS123" target="_blank" rel="noopener">@BowenS123</a>).
         </p>
       </div>
       <span class="github-status mono" id="githubStatus">repos laden…</span>
     </div>
 
     <div class="contribution-box">
-      <h3>GitHub-activiteit</h3>
+      <h3 data-i18n="github.activity">GitHub-activiteit</h3>
       <div class="contribution-chart-container">
         <img src="https://ghchart.rshah.org/1F3D2C/BowenS123" alt="GitHub-contributiegrafiek van BowenS123" loading="lazy">
       </div>
@@ -509,52 +510,52 @@
 <!-- tijdlijn -->
 <section id="tijdlijn" class="section">
   <div class="section-inner">
-    <p class="section-kicker mono">Ontwikkeling · van basis naar systeem</p>
-    <h2>Mijn projecttijdlijn</h2>
-    <p class="section-lead">Van elektronica en embedded systemen naar geïntegreerde productielijnen: hier zie je hoe mijn projecten zich doorheen de opleiding ontwikkelden.</p>
+    <p class="section-kicker mono" data-i18n="timeline.kicker">Ontwikkeling · van basis naar systeem</p>
+    <h2 data-i18n="timeline.title">Mijn projecttijdlijn</h2>
+    <p class="section-lead" data-i18n="timeline.lead">Van elektronica en embedded systemen naar geïntegreerde productielijnen: hier zie je hoe mijn projecten zich doorheen de opleiding ontwikkelden.</p>
 
     <div class="project-timeline">
       <article class="timeline-project">
         <div class="timeline-marker mono">Jaar 1</div>
         <div class="timeline-project-body">
-          <p class="project-kicker mono">Fundament</p>
-          <h3>Elektronica, microcontrollers en PCB-design</h3>
-          <p>Ik bouwde de basis op in C, digitale technieken, mechatronica en hardwareproductie. Daardoor leerde ik schakelingen niet alleen ontwerpen, maar ook meten, testen en documenteren.</p>
+          <p class="project-kicker mono" data-i18n="timeline.foundation">Fundament</p>
+          <h3 data-i18n="timeline.foundationTitle">Elektronica, microcontrollers en PCB-design</h3>
+          <p data-i18n="timeline.foundationText">Ik bouwde de basis op in C, digitale technieken, mechatronica en hardwareproductie. Daardoor leerde ik schakelingen niet alleen ontwerpen, maar ook meten, testen en documenteren.</p>
           <div class="tech-stack"><span class="tech-tag">C</span><span class="tech-tag">Microcontrollers</span><span class="tech-tag">PCB design</span></div>
         </div>
       </article>
       <article class="timeline-project">
         <div class="timeline-marker mono">Jaar 2</div>
         <div class="timeline-project-body">
-          <p class="project-kicker mono">Project onderzoek · afgerond</p>
-          <h3><a href="#projecten">LoRa GPS-tracker</a></h3>
-          <p>Een eerste volledig systeemproject: sensordata verzamelen met een ESP32, draadloos versturen via LoRa en visualiseren op een Raspberry Pi-dashboard.</p>
+          <p class="project-kicker mono" data-i18n="timeline.loraKicker">Project onderzoek · afgerond</p>
+          <h3><a href="#projecten" data-i18n="timeline.loraTitle">LoRa GPS-tracker</a></h3>
+          <p data-i18n="timeline.loraText">Een eerste volledig systeemproject: sensordata verzamelen met een ESP32, draadloos versturen via LoRa en visualiseren op een Raspberry Pi-dashboard.</p>
           <div class="tech-stack"><span class="tech-tag">ESP32</span><span class="tech-tag">LoRa</span><span class="tech-tag">GPS</span><span class="tech-tag">Raspberry Pi</span></div>
         </div>
       </article>
       <article class="timeline-project">
         <div class="timeline-marker mono is-open">Jaar 2</div>
         <div class="timeline-project-body">
-          <p class="project-kicker mono">Project engineering · gerealiseerd</p>
-          <h3><a href="#projecten">Industry 4.0-verwerkingslijn</a></h3>
-          <p>Mijn meest geïntegreerde project tot nu toe: PLC-automatisatie, TwinCAT Vision voor QR-scanning, MQTT-communicatie, een robotarm en een ESP32-mixer in één productielijn.</p>
+          <p class="project-kicker mono" data-i18n="timeline.industryKicker">Project engineering · prototype afgerond</p>
+          <h3><a href="#projecten" data-i18n="timeline.industryTitle">Industry 4.0-verwerkingslijn</a></h3>
+          <p data-i18n="timeline.industryText">Mijn meest geïntegreerde project tot nu toe: PLC-automatisatie, TwinCAT Vision voor QR-scanning, MQTT-communicatie, een robotarm en een ESP32-mixer in één productielijn.</p>
           <div class="tech-stack"><span class="tech-tag">TwinCAT</span><span class="tech-tag">MQTT</span><span class="tech-tag">TwinCAT Vision</span><span class="tech-tag">Embedded C++</span></div>
         </div>
       </article>
       <article class="timeline-project timeline-project-next">
         <div class="timeline-marker mono">Jaar 3</div>
         <div class="timeline-project-body">
-          <p class="project-kicker mono">Nog te starten</p>
-          <h3>Nieuwe projecten volgen</h3>
-          <p>Dit studiejaar moet nog komen. Hier voeg ik later nieuwe projecten, technologieën en resultaten toe.</p>
+          <p class="project-kicker mono" data-i18n="timeline.upcomingKicker">Nog te starten</p>
+          <h3 data-i18n="timeline.upcomingTitle">Nieuwe projecten volgen</h3>
+          <p data-i18n="timeline.upcomingText">Dit studiejaar moet nog komen. Hier voeg ik later nieuwe projecten, technologieën en resultaten toe.</p>
         </div>
       </article>
       <article class="timeline-project timeline-project-next">
         <div class="timeline-marker mono">Volgende stap</div>
         <div class="timeline-project-body">
-          <p class="project-kicker mono">In voorbereiding</p>
-          <h3>Stage en bachelorproef</h3>
-          <p>De volgende stap is mijn ervaring verdiepen in een professionele omgeving, met focus op embedded software, industriële automatisatie en betrouwbare systeemintegratie.</p>
+          <p class="project-kicker mono" data-i18n="timeline.nextKicker">In voorbereiding</p>
+          <h3 data-i18n="timeline.nextTitle">Stage en bachelorproef</h3>
+          <p data-i18n="timeline.nextText">De volgende stap is mijn ervaring verdiepen in een professionele omgeving, met focus op embedded software, industriële automatisatie en betrouwbare systeemintegratie.</p>
           <div class="tech-stack"><span class="tech-tag">Stage</span><span class="tech-tag">Bachelorproef</span></div>
         </div>
       </article>
@@ -565,8 +566,8 @@
 <!-- certificaten -->
 <section id="certificaten" class="section section-alt">
   <div class="section-inner">
-    <h2>Certificaten &amp; activiteiten</h2>
-    <p class="section-lead">Certificaten van behaalde cursussen en overige relevante activiteiten.</p>
+    <h2 data-i18n="certificates.title">Certificaten &amp; activiteiten</h2>
+    <p class="section-lead" data-i18n="certificates.lead">Certificaten van behaalde cursussen en overige relevante activiteiten.</p>
 
     <div class="table-scroll">
       <table class="log-table">
@@ -578,8 +579,8 @@
             <td>Fundamentals of Accelerated Computing with CUDA C/C++</td>
             <td>Certificaat</td>
             <td>21/02/2025</td>
-            <td><a href="assets/certificaten/Bowen_Liang_NVIDIA.pdf" target="_blank" rel="noopener">Bekijk</a></td>
-            <td class="status">voltooid</td>
+            <td><a href="assets/certificaten/Bowen_Liang_NVIDIA.pdf" target="_blank" rel="noopener" data-i18n="certificates.view">Bekijk</a></td>
+            <td class="status" data-i18n="certificates.completed">voltooid</td>
           </tr>
         </tbody>
       </table>
@@ -590,7 +591,7 @@
 <!-- contact -->
 <section id="contact" class="section contact-section">
   <h2>Contact</h2>
-  <p>Wil je meer weten over mijn projecten en vaardigheden?</p>
+  <p data-i18n="contact.lead">Wil je meer weten over mijn projecten en vaardigheden?</p>
   <div class="contact-links">
     <a class="btn btn-ghost" href="https://github.com/BowenS123" target="_blank" rel="noopener">GitHub</a>
     <a class="btn btn-ghost" href="mailto:bowen.liang@student.pxl.be">bowen.liang@student.pxl.be</a>
@@ -600,7 +601,7 @@
 </main>
 
 <footer class="footer">
-  <p>Portfolio Elektronica-ICT van Bowen Liang. Laatst bijgewerkt: <span id="updateDate"></span>.</p>
+  <p><span data-i18n="footer.text">Portfolio Elektronica-ICT van Bowen Liang. Laatst bijgewerkt:</span> <span id="updateDate"></span>.</p>
 </footer>
 
 <script src="script.js"></script>

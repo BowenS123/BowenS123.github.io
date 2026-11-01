@@ -125,6 +125,24 @@ p:last-child { margin-bottom: 0; }
 
 .nav-toggle { display: none; }
 
+.language-toggle {
+  flex: 0 0 auto;
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  padding: 0.35rem 0.55rem;
+  background: var(--white);
+  color: var(--pcb-soft);
+  font-size: 0.72rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.language-toggle:hover {
+  border-color: var(--copper);
+  color: var(--copper);
+  background: var(--copper-tint);
+}
+
 @media (max-width: 760px) {
   .topnav {
     position: absolute;
@@ -149,6 +167,11 @@ p:last-child { margin-bottom: 0; }
     font-size: 0.75rem;
     color: var(--ink);
     cursor: pointer;
+  }
+
+  .language-toggle {
+    margin-left: auto;
+    margin-right: 0.45rem;
   }
 }
 
