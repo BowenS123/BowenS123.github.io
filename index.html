@@ -49,7 +49,7 @@
     </div>
     <ul class="hero-facts" aria-label="Portfolio in cijfers">
       <li><strong data-i18n="facts.hardware">Hardware + software</strong><span data-i18n="facts.hardwareSub">Van sensor tot dashboard</span></li>
-      <li><strong data-i18n="facts.projects">2 projecten</strong><span data-i18n="facts.projectsSub">Uitgewerkt en gedocumenteerd</span></li>
+      <li><strong data-i18n="facts.projects">4 projecten</strong><span data-i18n="facts.projectsSub">Uitgewerkt en gedocumenteerd</span></li>
       <li><strong>Elektronica-ICT</strong><span data-i18n="facts.studySub">PXL Hogeschool · jaar 3</span></li>
     </ul>
   </div>
@@ -515,6 +515,68 @@
     </div>
   </article>
 
+  <!-- PROJECT: Intercom -->
+  <article class="project-card intercom-project">
+    <div class="project-head">
+      <div>
+        <p class="project-kicker mono" data-i18n="intercom.kicker">Project Innovation · teamproject</p>
+        <h3 data-i18n="intercom.title">Intercom: realtime audio over het netwerk</h3>
+        <p class="entry-meta" data-i18n="intercom.meta">Jaar 3 · Innovation · teamproject met drie studenten</p>
+      </div>
+      <div class="project-actions">
+        <span class="project-status"><span class="status-dot"></span><span data-i18n="project.completed">Gerealiseerd</span></span>
+        <a class="btn btn-ghost btn-sm" href="https://github.com/BowenS123/Intercom" target="_blank" rel="noopener">GitHub Repo</a>
+      </div>
+    </div>
+
+    <p class="project-summary" data-i18n="intercom.summary">
+      Een netwerkgebaseerd intercomsysteem met een Raspberry Pi als centrale zender en Google AIY Voice Kits
+      als ontvangers in de kamers. De microfoon wordt live gestreamd via UDP naar één kamer of naar alle
+      kamers tegelijk. Met een aparte knop speel je een alarmgeluid (sirene) af in het hele systeem.
+    </p>
+
+    <div class="industry-stats">
+      <div><strong>4</strong><span data-i18n="intercom.statRooms">kamers + alle kamers</span></div>
+      <div><strong>UDP</strong><span data-i18n="intercom.statStream">live audiostream</span></div>
+      <div><strong>16 kHz</strong><span data-i18n="intercom.statAudio">mono, 16-bit audio</span></div>
+    </div>
+
+    <div class="tech-stack">
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">UDP-sockets</span>
+      <span class="tech-tag">Multithreading</span>
+      <span class="tech-tag">Raspberry Pi</span>
+      <span class="tech-tag">Google AIY Voice Kit</span>
+      <span class="tech-tag">Flask</span>
+      <span class="tech-tag">NumPy</span>
+      <span class="tech-tag">GPIO</span>
+    </div>
+
+    <details class="reflectie-block">
+      <summary data-i18n="intercom.details">Hoe het systeem werkt</summary>
+      <div class="details-content">
+        <div class="reflectie-steps">
+          <div class="reflectie-step">
+            <span class="step-label mono" data-i18n="intercom.sender">Zender</span>
+            <p data-i18n="intercom.senderText">De Raspberry Pi leest zes drukknoppen via GPIO: vier kamers, één knop voor alle kamers en één sirene-knop. De microfoon wordt opgenomen met arecord en in pakketjes van 4096 bytes via UDP naar de gekozen kamers gestuurd. Drie threads draaien tegelijk: microfoon, sirene en knoppen.</p>
+          </div>
+          <div class="reflectie-step">
+            <span class="step-label mono" data-i18n="intercom.receiver">Ontvanger</span>
+            <p data-i18n="intercom.receiverText">De AIY Voice Kit ontvangt de pakketjes in een aparte thread en zet ze in een wachtrij. Een tweede thread past het volume aan met NumPy en speelt het geluid af via aplay. Een Flask-dashboard (poort 8080) toont de status en laat toe om het volume, de mute en het zendtarget te beheren.</p>
+          </div>
+          <div class="reflectie-step">
+            <span class="step-label mono" data-i18n="intercom.leds">Status-LED</span>
+            <p data-i18n="intercom.ledsText">Rood betekent gedempt, groen betekent dat er audio binnenkomt en blauw betekent stand-by. De fysieke knop op de kit schakelt mute aan of uit en bevestigt dat met een gesproken melding.</p>
+          </div>
+          <div class="reflectie-step">
+            <span class="step-label mono" data-i18n="intercom.next">Mogelijke uitbreidingen</span>
+            <p data-i18n="intercom.nextText">Versleuteling van de audiostream, een mobiele app en een eenvoudigere manier om IP-adressen en kamers te configureren.</p>
+          </div>
+        </div>
+      </div>
+    </details>
+  </article>
+
   <!-- PROJECT TEMPLATE: kopieer dit blok voor een nieuw project -->
   <article class="project-card project-template" aria-label="Template voor een toekomstig project">
     <div class="template-mark mono">+</div>
@@ -605,12 +667,13 @@
           <div class="tech-stack"><span class="tech-tag">TwinCAT</span><span class="tech-tag">MQTT</span><span class="tech-tag">TwinCAT Vision</span><span class="tech-tag">Embedded C++</span></div>
         </div>
       </article>
-      <article class="timeline-project timeline-project-next">
+      <article class="timeline-project">
         <div class="timeline-marker mono">Jaar 3</div>
         <div class="timeline-project-body">
-          <p class="project-kicker mono" data-i18n="timeline.upcomingKicker">Nog te starten</p>
-          <h3 data-i18n="timeline.upcomingTitle">Nieuwe projecten volgen</h3>
-          <p data-i18n="timeline.upcomingText">Dit studiejaar moet nog komen. Hier voeg ik later nieuwe projecten, technologieën en resultaten toe.</p>
+          <p class="project-kicker mono" data-i18n="timeline.intercomKicker">Project Innovation · afgerond</p>
+          <h3><a href="#projecten" data-i18n="timeline.intercomTitle">Intercom-systeem</a></h3>
+          <p data-i18n="timeline.intercomText">Een intercom over het netwerk: live audio van een Raspberry Pi naar Google AIY Voice Kits via UDP en multithreaded Python, met mute-knop, status-LED's en een webdashboard.</p>
+          <div class="tech-stack"><span class="tech-tag">Python</span><span class="tech-tag">UDP</span><span class="tech-tag">Raspberry Pi</span><span class="tech-tag">Flask</span></div>
         </div>
       </article>
       <article class="timeline-project timeline-project-next">
