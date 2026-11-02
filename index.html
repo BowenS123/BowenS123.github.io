@@ -316,28 +316,28 @@
     </div>
 
     <details class="reflectie-block">
-      <summary data-i18n="project.contribution">Mijn bijdrage en resultaten</summary>
+      <summary data-i18n="lora.details">Systeemopbouw en resultaten</summary>
       <div class="details-content">
-        <h4 data-i18n="project.specificContribution">Mijn specifieke bijdrage</h4>
+        <h4 data-i18n="lora.roleTitle">Mijn rol in het systeem</h4>
         <p data-i18n="lora.contribution">
           Ik schreef de application note van de zender, bouwde de ESP32-firmware met GPS en
           temperatuurmeting, en ontwierp de batterijvoeding (Li-ion, TP4056-lader en step-up converter)
           met stroommetingen van het slaapverbruik. Daarnaast werkte ik mee aan de Node-RED-flow
           en het dashboard van de ontvanger.
         </p>
-        <h4 data-i18n="project.results">Resultaten</h4>
+        <h4 data-i18n="lora.resultsTitle">Testresultaten en leerpunten</h4>
         <div class="reflectie-steps">
           <div class="reflectie-step">
-            <span class="step-label mono">Bereik</span>
-            <p>Ongeveer 1,1 km betrouwbare verbinding met een 15 cm gluestick-antenne.</p>
+            <span class="step-label mono" data-i18n="lora.rangeLabel">Bereik</span>
+            <p data-i18n="lora.rangeText">Ongeveer 1,1 km betrouwbare verbinding met een 15 cm gluestick-antenne.</p>
           </div>
           <div class="reflectie-step">
-            <span class="step-label mono">Stroomverbruik</span>
-            <p>Ongeveer 90 mA in light-sleep en 150 mA actief, gemeten met een USB-tester.</p>
+            <span class="step-label mono" data-i18n="lora.powerLabel">Stroomverbruik</span>
+            <p data-i18n="lora.powerText">Ongeveer 90 mA in light-sleep en 150 mA actief, gemeten met een USB-tester.</p>
           </div>
           <div class="reflectie-step">
-            <span class="step-label mono">Leerpunt</span>
-            <p>Regelgeving (ETSI EN 300 220: 14 dBm EIRP, 1 % duty cycle) bepaalt mee de instellingen van de module.</p>
+            <span class="step-label mono" data-i18n="lora.learningLabel">Leerpunt</span>
+            <p data-i18n="lora.learningText">Regelgeving (ETSI EN 300 220: 14 dBm EIRP, 1 % duty cycle) bepaalt mee de instellingen van de module.</p>
           </div>
         </div>
       </div>
@@ -412,10 +412,10 @@
     </div>
 
     <details class="reflectie-block">
-      <summary data-i18n="industry.contribution">Mijn bijdrage en reflectie</summary>
+      <summary data-i18n="industry.details">Systeemopbouw en mijn rol</summary>
       <div class="details-content">
-        <h4>Mijn specifieke bijdrage</h4>
-        <p>
+        <h4 data-i18n="industry.roleTitle">Mijn rol in het systeem</h4>
+        <p data-i18n="industry.roleText">
           Mijn belangrijkste bijdrage was de configuratie van de transportbandmotor via de
           EL7332 EtherCAT-terminal, inclusief CoE-parameters en de NC-as. Daarnaast werkte ik aan
           de PSoC6-robotarm en de MQTT-communicatie met de PLC. De berichten werden als JSON
@@ -426,34 +426,34 @@
           werking, tests en gebruikersbediening.
         </p>
 
-        <h4>Reflectie (Korthagenmodel)</h4>
+        <h4 data-i18n="industry.reflectionTitle">Wat ik geleerd heb</h4>
         <div class="reflectie-steps">
           <div class="reflectie-step">
-            <span class="step-label mono">Fase 1: Situatie</span>
-            <p>Voor de semi-geautomatiseerde productielijn werkte ik aan EtherCAT-motorsturing,
+            <span class="step-label mono" data-i18n="industry.phase1Label">Fase 1: Situatie</span>
+            <p data-i18n="industry.phase1Text">Voor de semi-geautomatiseerde productielijn werkte ik aan EtherCAT-motorsturing,
               de PSoC6-robotarm, MQTT/JSON-communicatie en QR-detectie met TwinCAT Vision.</p>
           </div>
           <div class="reflectie-step">
-            <span class="step-label mono">Fase 2: Terugblik</span>
-            <p>De afzonderlijke subsystemen werkten betrouwbaar in hun eigen testomgeving.
+            <span class="step-label mono" data-i18n="industry.phase2Label">Fase 2: Terugblik</span>
+            <p data-i18n="industry.phase2Text">De afzonderlijke subsystemen werkten betrouwbaar in hun eigen testomgeving.
               De volledige integratie was nog niet afgerond, waardoor timing en foutafhandeling
               over de hele lijn verder getest moesten worden.</p>
           </div>
           <div class="reflectie-step">
-            <span class="step-label mono">Fase 3: Kernkenmerken</span>
-            <p>De modulaire aanpak was een sterke keuze: de PLC coördineert, terwijl de PSoC6
+            <span class="step-label mono" data-i18n="industry.phase3Label">Fase 3: Kernkenmerken</span>
+            <p data-i18n="industry.phase3Text">De modulaire aanpak was een sterke keuze: de PLC coördineert, terwijl de PSoC6
               en ESP32 hun eigen taak uitvoeren. Duidelijke MQTT-topics, statusfeedback en een
               overzichtelijke HMI zijn daarbij essentieel.</p>
           </div>
           <div class="reflectie-step">
-            <span class="step-label mono">Fase 4: Alternatieven</span>
-            <p>Ik zou vooraf een duidelijke rolverdeling, vaste feature branches en gezamenlijke
+            <span class="step-label mono" data-i18n="industry.phase4Label">Fase 4: Alternatieven</span>
+            <p data-i18n="industry.phase4Text">Ik zou vooraf een duidelijke rolverdeling, vaste feature branches en gezamenlijke
               integratietests afspreken. Vooral de timing tussen transportband, vision en robotarm
               moet vanaf het begin als één keten getest worden.</p>
           </div>
           <div class="reflectie-step">
-            <span class="step-label mono">Fase 5: Uitproberen</span>
-            <p>Bij een volgende iteratie zou ik eerst de afzonderlijke tests automatiseren en
+            <span class="step-label mono" data-i18n="industry.phase5Label">Fase 5: Uitproberen</span>
+            <p data-i18n="industry.phase5Text">Bij een volgende iteratie zou ik eerst de afzonderlijke tests automatiseren en
               daarna stapsgewijs de volledige cyclus valideren: QR-scan, wegen, metaaldetectie,
               mengen en foutafhandeling onder continue belasting.</p>
           </div>
@@ -516,7 +516,7 @@
   </article>
 
   <!-- PROJECT: Intercom -->
-  <article class="project-card intercom-project">
+  <article class="project-card industry-project intercom-project">
     <div class="project-head">
       <div>
         <p class="project-kicker mono" data-i18n="intercom.kicker">Project Innovation · teamproject</p>
@@ -524,26 +524,28 @@
         <p class="entry-meta" data-i18n="intercom.meta">Jaar 3 · Innovation · teamproject met drie studenten</p>
       </div>
       <div class="project-actions">
-        <span class="project-status"><span class="status-dot"></span><span data-i18n="project.completed">Gerealiseerd</span></span>
+        <span class="project-status"><span class="status-dot"></span><span data-i18n="timeline.statusDone">Afgerond</span></span>
         <a class="btn btn-ghost btn-sm" href="https://github.com/BowenS123/Intercom" target="_blank" rel="noopener">GitHub Repo</a>
       </div>
     </div>
 
+    <div class="intercom-intro">
     <p class="project-summary" data-i18n="intercom.summary">
       Een netwerkgebaseerd intercomsysteem met een Raspberry Pi als centrale zender en Google AIY Voice Kits
       als ontvangers in de kamers. De microfoon wordt live gestreamd via UDP naar één kamer of naar alle
       kamers tegelijk. Met een aparte knop speel je een alarmgeluid (sirene) af in het hele systeem.
     </p>
 
-    <figure class="intercom-photo" style="margin:1.25rem 0;text-align:center">
-      <img src="assets/projecten/intercom/GoogleAIYVoiceKits.png" alt="Google AIY Voice Kit, de ontvanger van het intercomsysteem" loading="lazy" style="max-width:100%;max-height:360px;height:auto;border-radius:12px" onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='https://raw.githubusercontent.com/BowenS123/Intercom/main/Resources/GoogleAIYVoiceKits.png';}else{this.closest('figure').hidden=true;}">
-      <figcaption class="caption" data-i18n="intercom.photoCaption" style="margin-top:0.5rem">Google AIY Voice Kit: de ontvanger in elke kamer</figcaption>
+    <figure class="intercom-figure">
+      <img src="assets/projecten/intercom/GoogleAIYVoiceKits.png" alt="Google AIY Voice Kit, de ontvanger van het intercomsysteem" loading="lazy" onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='https://raw.githubusercontent.com/BowenS123/Intercom/main/Resources/GoogleAIYVoiceKits.png';}else{this.closest('figure').hidden=true;}">
+      <figcaption data-i18n="intercom.photoCaption">Google AIY Voice Kit: de ontvanger in elke kamer</figcaption>
     </figure>
 
     <div class="industry-stats">
       <div><strong>4</strong><span data-i18n="intercom.statRooms">kamers + alle kamers</span></div>
       <div><strong>UDP</strong><span data-i18n="intercom.statStream">live audiostream</span></div>
       <div><strong>16 kHz</strong><span data-i18n="intercom.statAudio">mono, 16-bit audio</span></div>
+    </div>
     </div>
 
     <div class="tech-stack">
@@ -560,22 +562,22 @@
     <details class="reflectie-block">
       <summary data-i18n="intercom.details">Hoe het systeem werkt</summary>
       <div class="details-content">
-        <div class="reflectie-steps">
-          <div class="reflectie-step">
+        <div class="reflectie-steps system-flow">
+          <div class="reflectie-step system-step">
             <span class="step-label mono" data-i18n="intercom.sender">Zender</span>
             <p data-i18n="intercom.senderText">De Raspberry Pi leest zes drukknoppen via GPIO: vier kamers, één knop voor alle kamers en één sirene-knop. De microfoon wordt opgenomen met arecord en in pakketjes van 4096 bytes via UDP naar de gekozen kamers gestuurd. Drie threads draaien tegelijk: microfoon, sirene en knoppen.</p>
           </div>
-          <div class="reflectie-step">
+          <div class="reflectie-step system-step">
+            <span class="step-label mono" data-i18n="intercom.network">Netwerk</span>
+            <p data-i18n="intercom.networkText">De gekozen kamer wordt bepaald door het doel-IP-adres. De audiopakketjes gaan via UDP rechtstreeks naar één ontvanger of gelijktijdig naar alle kamers, zonder dat een centrale server de audio moet verwerken.</p>
+          </div>
+          <div class="reflectie-step system-step">
             <span class="step-label mono" data-i18n="intercom.receiver">Ontvanger</span>
             <p data-i18n="intercom.receiverText">De AIY Voice Kit ontvangt de pakketjes in een aparte thread en zet ze in een wachtrij. Een tweede thread past het volume aan met NumPy en speelt het geluid af via aplay. Een Flask-dashboard (poort 8080) toont de status en laat toe om het volume, de mute en het zendtarget te beheren.</p>
           </div>
-          <div class="reflectie-step">
-            <span class="step-label mono" data-i18n="intercom.leds">Status-LED</span>
-            <p data-i18n="intercom.ledsText">Rood betekent gedempt, groen betekent dat er audio binnenkomt en blauw betekent stand-by. De fysieke knop op de kit schakelt mute aan of uit en bevestigt dat met een gesproken melding.</p>
-          </div>
-          <div class="reflectie-step">
-            <span class="step-label mono" data-i18n="intercom.next">Mogelijke uitbreidingen</span>
-            <p data-i18n="intercom.nextText">Versleuteling van de audiostream, een mobiele app en een eenvoudigere manier om IP-adressen en kamers te configureren.</p>
+          <div class="reflectie-step system-step">
+            <span class="step-label mono" data-i18n="intercom.controls">Bediening en status</span>
+            <p data-i18n="intercom.controlsText">Het dashboard beheert volume, mute en zenddoel. De status-LED geeft meteen feedback: rood is gedempt, groen betekent dat audio binnenkomt en blauw staat voor stand-by. De fysieke knop op de kit schakelt mute in of uit.</p>
           </div>
         </div>
       </div>
@@ -639,6 +641,7 @@
       <article class="timeline-project">
         <div class="timeline-marker mono">Jaar 1</div>
         <div class="timeline-project-body">
+          <p class="timeline-status" data-i18n="timeline.statusDone">Afgerond</p>
           <p class="project-kicker mono" data-i18n="timeline.foundation">Fundament</p>
           <h3 data-i18n="timeline.foundationTitle">Elektronica, microcontrollers en PCB-design</h3>
           <p data-i18n="timeline.foundationText">Ik bouwde de basis op in C, digitale technieken, mechatronica en hardwareproductie. Daardoor leerde ik schakelingen niet alleen ontwerpen, maar ook meten, testen en documenteren.</p>
@@ -648,6 +651,7 @@
       <article class="timeline-project">
         <div class="timeline-marker mono">Jaar 1</div>
         <div class="timeline-project-body">
+          <p class="timeline-status" data-i18n="timeline.statusDone">Afgerond</p>
           <p class="project-kicker mono" data-i18n="timeline.cKicker">Eerstejaarsvak · eindproject</p>
           <h3><a href="#projecten" data-i18n="timeline.cTitle">C programming: Minesweeper</a></h3>
           <p data-i18n="timeline.cText">Mijn eerste grotere programmeerproject in C. Ik oefende met functies, arrays, structs, enums, inputvalidatie en recursie door een speelbare terminalversie van Minesweeper te bouwen.</p>
@@ -657,16 +661,18 @@
       <article class="timeline-project">
         <div class="timeline-marker mono">Jaar 2</div>
         <div class="timeline-project-body">
-          <p class="project-kicker mono" data-i18n="timeline.loraKicker">Project onderzoek · afgerond</p>
+          <p class="timeline-status" data-i18n="timeline.statusDone">Afgerond</p>
+          <p class="project-kicker mono" data-i18n="timeline.loraKicker">Project onderzoek</p>
           <h3><a href="#projecten" data-i18n="timeline.loraTitle">LoRa GPS-tracker</a></h3>
           <p data-i18n="timeline.loraText">Een eerste volledig systeemproject: sensordata verzamelen met een ESP32, draadloos versturen via LoRa en visualiseren op een Raspberry Pi-dashboard.</p>
           <div class="tech-stack"><span class="tech-tag">ESP32</span><span class="tech-tag">LoRa</span><span class="tech-tag">GPS</span><span class="tech-tag">Raspberry Pi</span></div>
         </div>
       </article>
       <article class="timeline-project">
-        <div class="timeline-marker mono is-open">Jaar 2</div>
+        <div class="timeline-marker mono">Jaar 2</div>
         <div class="timeline-project-body">
-          <p class="project-kicker mono" data-i18n="timeline.industryKicker">Project engineering · prototype afgerond</p>
+          <p class="timeline-status is-open" data-i18n="timeline.statusOpen">Prototype klaar, integratie loopt nog</p>
+          <p class="project-kicker mono" data-i18n="timeline.industryKicker">Project engineering</p>
           <h3><a href="#projecten" data-i18n="timeline.industryTitle">Industry 4.0-verwerkingslijn</a></h3>
           <p data-i18n="timeline.industryText">Mijn meest geïntegreerde project tot nu toe: PLC-automatisatie, TwinCAT Vision voor QR-scanning, MQTT-communicatie, een robotarm en een ESP32-mixer in één productielijn.</p>
           <div class="tech-stack"><span class="tech-tag">TwinCAT</span><span class="tech-tag">MQTT</span><span class="tech-tag">TwinCAT Vision</span><span class="tech-tag">Embedded C++</span></div>
@@ -675,7 +681,8 @@
       <article class="timeline-project">
         <div class="timeline-marker mono">Jaar 3</div>
         <div class="timeline-project-body">
-          <p class="project-kicker mono" data-i18n="timeline.intercomKicker">Project Innovation · afgerond</p>
+          <p class="timeline-status" data-i18n="timeline.statusDone">Afgerond</p>
+          <p class="project-kicker mono" data-i18n="timeline.intercomKicker">Project Innovation</p>
           <h3><a href="#projecten" data-i18n="timeline.intercomTitle">Intercom-systeem</a></h3>
           <p data-i18n="timeline.intercomText">Een intercom over het netwerk: live audio van een Raspberry Pi naar Google AIY Voice Kits via UDP en multithreaded Python, met mute-knop, status-LED's en een webdashboard.</p>
           <div class="tech-stack"><span class="tech-tag">Python</span><span class="tech-tag">UDP</span><span class="tech-tag">Raspberry Pi</span><span class="tech-tag">Flask</span></div>

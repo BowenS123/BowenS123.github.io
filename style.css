@@ -978,6 +978,58 @@ p:last-child { margin-bottom: 0; }
   margin: 0;
 }
 
+/* Intercom: tekst en stats links, foto in een vast kader rechts */
+.intercom-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 1.2rem clamp(1.2rem, 3vw, 3rem);
+  align-items: center;
+  margin: 1.2rem 0 0.4rem;
+}
+
+.intercom-intro .project-summary { grid-column: 1; margin: 0; }
+.intercom-intro .industry-stats { grid-column: 1; }
+.intercom-intro .intercom-figure { grid-column: 2; grid-row: 1 / span 2; }
+
+.intercom-figure {
+  position: relative;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.intercom-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.intercom-figure figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.6rem 1rem;
+  background: rgba(22, 32, 27, 0.82);
+  backdrop-filter: blur(4px);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 700px) {
+  .intercom-intro { grid-template-columns: 1fr; }
+  .intercom-intro .project-summary,
+  .intercom-intro .industry-stats,
+  .intercom-intro .intercom-figure { grid-column: 1; grid-row: auto; }
+}
+
 .project-slideshow {
   margin: 1.2rem 0;
   position: relative;
@@ -1160,6 +1212,43 @@ code {
   margin-bottom: 0.1rem;
 }
 
+.system-flow {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.system-step {
+  position: relative;
+  min-height: 100%;
+  padding: 1rem 1rem 1rem 3.2rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--white);
+}
+
+.system-step::before {
+  content: counter(system-step);
+  counter-increment: system-step;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: grid;
+  place-items: center;
+  width: 1.45rem;
+  height: 1.45rem;
+  border-radius: 50%;
+  background: var(--pcb);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+}
+
+.system-flow { counter-reset: system-step; }
+
+@media (max-width: 700px) {
+  .system-flow { grid-template-columns: 1fr; }
+}
+
 /* Tijdlijn */
 .project-timeline {
   position: relative;
@@ -1173,7 +1262,7 @@ code {
   position: absolute;
   top: 1.2rem;
   bottom: 1.2rem;
-  left: 4.35rem;
+  left: 8.4rem;
   width: 1px;
   background: var(--line-strong);
 }
@@ -1191,7 +1280,7 @@ code {
   content: "";
   position: absolute;
   top: 1.05rem;
-  left: 4.05rem;
+  left: 8.075rem;
   width: 0.65rem;
   height: 0.65rem;
   border: 2px solid var(--paper);
@@ -1201,6 +1290,7 @@ code {
 }
 
 .timeline-project-body {
+  position: relative;
   min-width: 0;
   padding: 1.25rem 1.4rem;
   border: 1px solid var(--line);
@@ -1213,7 +1303,37 @@ code {
 .timeline-project-body h3,
 .timeline-project-body p { overflow-wrap: anywhere; }
 .timeline-project-body h3 a { color: inherit; text-decoration-color: var(--copper-soft); }
-.timeline-project-body p:not(.project-kicker) { margin-bottom: 1rem; }
+.timeline-project-body p:not(.project-kicker) { margin-bottom: 0; }
+.timeline-project-body .tech-stack { margin: 1rem 0 0; }
+
+/* Status per tijdlijnitem: vervangt de onuitgelegde oranje markering */
+.timeline-status {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  width: 100%;
+  margin: 0 0 0.6rem !important;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--pcb-soft);
+  text-align: right;
+  white-space: normal;
+}
+.timeline-status::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3d8b55;
+  box-shadow: 0 0 0 4px rgba(61, 139, 85, 0.12);
+}
+.timeline-status.is-open { color: var(--copper); }
+.timeline-status.is-open::before {
+  background: var(--copper-soft);
+  box-shadow: 0 0 0 4px rgba(168, 103, 46, 0.15);
+}
 .timeline-project-next .timeline-project-body { border-style: dashed; background: rgba(255, 255, 255, 0.55); }
 
 @media (max-width: 900px) and (min-width: 641px) {
@@ -1222,8 +1342,8 @@ code {
     gap: 1rem;
   }
 
-  .project-timeline::before { left: 3.65rem; }
-  .timeline-project::before { left: 3.35rem; }
+  .project-timeline::before { left: 6.9rem; }
+  .timeline-project::before { left: 6.575rem; }
 }
 
 .timeline-year {
@@ -1237,7 +1357,7 @@ code {
   .project-timeline::before { left: 0.35rem; }
   .timeline-project { grid-template-columns: 1fr; gap: 0.55rem; padding-left: 1.35rem; }
   .timeline-project::before { left: 0; top: 1.1rem; }
-  .timeline-marker { width: fit-content; }
+  .timeline-project .timeline-marker { width: fit-content; justify-self: start; text-align: left; }
   .timeline-project-body { padding: 1rem; }
 }
 
@@ -1249,6 +1369,8 @@ code {
   border-radius: 4px;
   padding: 0.4rem 0.6rem;
   height: fit-content;
+  justify-self: end;
+  text-align: right;
 }
 .timeline-marker.is-open { background: var(--copper); }
 
