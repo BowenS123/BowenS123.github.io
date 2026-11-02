@@ -318,8 +318,10 @@ function applyLanguage(language) {
     );
   }
   document.querySelectorAll("[data-i18n]").forEach((element) => {
-    const value = dictionary[element.dataset.i18n];
-    if (value) element.innerHTML = value;
+    const key = element.dataset.i18n;
+    if (Object.prototype.hasOwnProperty.call(dictionary, key)) {
+      element.innerHTML = dictionary[key];
+    }
   });
   if (languageToggle) {
     languageToggle.textContent = currentLanguage === "nl" ? "EN" : "NL";
